@@ -1,0 +1,36 @@
+---
+title: "Jayna's Data + Design Portfolio"
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-fold: true
+    code-tools: true
+website:
+  title: "Jayna's Portfolio"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: Projects
+      - href: blog.qmd
+        text: Blog
+    right:
+      - icon: github
+        href: https://github.com/your-username
+      - icon: linkedin
+        href: https://linkedin.com/in/your-linkedin
+  page-footer:
+    left: "© 2025 Jayna Lee"
+    right: "Built with ❤️ + [Quarto](https://quarto.org)"
+---
+
+# Welcome ✨
+
+Hi! I'm **Jayna**, a statistics & data science major with a passion for data visualization, design, and storytelling. This site is my home for projects, blog posts, and experiments in R, Python, and visual storytelling.
+
+---
+
+
