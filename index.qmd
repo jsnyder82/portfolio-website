@@ -27,7 +27,7 @@ website:
     right: "Built with ❤ + [Quarto](https://quarto.org)"
 ---
 
-# Welcome 
+## Welcome 
 
 Hi! I'm **Jayna**, a statistics & data science major with a passion for data visualization, design, and storytelling. This site is my home for projects, blog posts, and experiments in R, Python, and visual storytelling.
 
