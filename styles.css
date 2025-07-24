@@ -1,15 +1,15 @@
 body {
   font-family: 'Fira Sans', sans-serif;
-  background-color: #fdfdfd;
+  background-color: #f5eae4;
   color: #333;
 }
 h1, h2, h3 {
-  color: #1e3a8a;
+  color: #38519c;
 }
 a {
   color: #007acc;
 }
 .navbar {
   background-color: #ffffff;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #91adff;
 }
