@@ -19,18 +19,59 @@ website:
         text: Blog
     right:
       - icon: github
-        href: https://github.com/your-username
+        href: https://github.com/jsnyder82
       - icon: linkedin
-        href: https://linkedin.com/in/your-linkedin
+        href: https://linkedin.com/in/jayna-snyder
   page-footer:
     left: "© 2025 Jayna Snyder"
     right: "Built with ❤ + [Quarto](https://quarto.org)"
 ---
 
-# Welcome 
+## Welcome
 
-Hi! I'm **Jayna**, a statistics & data science major with a passion for data visualization, design, and storytelling. This site is my home for projects, blog posts, and experiments in R, Python, and visual storytelling.
+Hi! I'm **Jayna**, a statistics & data science major with a passion for data visualization, design, and storytelling.
 
----
+I'm a senior at SDSU (go Aztecs!) and am in love with San Diego. I want to stay here for the foreseeable future.
 
+I'm starting this website to be a collection of my projects, thoughts, and overall learning in data science, visualization, and storytelling. Whether you are a future employer, just interested in my projects and pretty graphics, or want some insight into a gen z's thought process, thank you for visiting!
+
+------------------------------------------------------------------------
+
+## My Motivations
+
+My generation has grown up in a world where almost any information we could ever want to know is only a few clicks away. Take any given day, usually mid conversation, I'll realize I don't know something, and if the person I'm talking to doesn't know either, I usually say, "I'm gonna look it up".
+
+I want to know the correct answer, not just the speculation of someone (my friend) whose far from an expert. The amazing thing is I can find out the real answer, with just a few taps on a screen. Well I can find out one answer, and
+
+another answer from three news articles about the topic,
+
+another answer from a nonprofit's website,
+
+and another similar answer from an academic paper,
+
+what six to seven influencers think about the subject,
+
+and a reddit feed or two, of questionable (at best) advice on the topic,
+
+and I can see some related images,
+
+about four videos teaching me about the topic,
+
+and of course six different companies trying to sell me whatever it is I looked up.
+
+There is so much data on the internet, and so many answers. Growing up, I remember being taught that if I could find three sources that say the same thing, that it's probably the right answer. I was 10, and doing a research project on giraffes. With all the information and data out there, three sources might not be enough anymore. Not to mention what I want to know is a lot more complex than how tall a baby giraffe is.
+
+Not to worry though, now we have AI to aggregate and summarize all that information on the internet, and even show it's sources. Great! Well, is it really? I mean yes it is, it saves time and it does make finding an answer easier. Is easier always better? How much should we trust it? How much should we even use it? I'm worried about my generation and the ones after mine, and that we will rely too heavily on AI, not only to answer our questions, but to make our decisions for us.
+
+Naturally, I began to think about how I could help my generation and the future ones continue to make decisions for themselves. Thinking through my given information (or knowns, thanks math), we've got,
+
+-   a population of young people overstimulated by information overload and decision fatigue
+-   contained within a digital space, an era of screens, video games, bright colors, and 15 second videos
+-   which has led to health issues galore, including, but definitely not limited to severe attention span issues
+
+With this information, I thought back through my question. How can I get people engaged in interacting with information to make their own decision? Well, with the target audience in mind, it seems obvious, make the information visual. While a histogram is never going to keep up with TikTok video, if it's visually aesthetic, easy to read, and clearly communicates complex information, at least people can understand it, which is a win in my book. If it can highlight frequently overlooked information, or lead your eye to an important pattern, that makes someone stop and think about something deeper, even better. 
+
+Now, keep in mind data visualizations can easily be skewed (math pun unintended, but it made me laugh, so it stays) to make comparisons seem more drastic than they really are, just by omitting zero in the y-axis. If it becomes overly visual and dynamic, it can distract from the content, or even worse just be confusing and hard to read. Use the wrong color combination and anyone who is color blind won't be able to understand the visual. If someone doesn't write alternate text, visually impaired people won't get the information. Needless to say, there are many ways data visualizations can go wrong, and not serve their original purpose, which is to communicate important information in an easily digestible way. 
+
+I want to create relevant and engaging data visualizations, so that all people can continue to make their own well informed decisions. While AI and predictive modelling can be super useful and fun to work with, let's not forget how to process information and make our own decisions. Trust your gut (and the graph I showed you), instead of putting all your eggs in an AI basket :)
 

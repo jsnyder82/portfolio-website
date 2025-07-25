@@ -2,14 +2,4 @@
 title: "Projects"
 ---
 
-Here are some of my favorite data projects that showcase my skills in analysis, visualization, and design:
 
-- **EDA & ggplot2**: Exploring the relationship between engine size and fuel efficiency in the `mpg` dataset.
-- **Clustering & PCA**: Customer segmentation using mall spending data.
-- **Logistic Regression**: Predicting Titanic survival with tidy modeling tools.
-- **Interactive Maps**: Built with `leaflet` to visualize dengue cases by region.
-
-Each project links to GitHub and includes a visual summary.
-
-
----
