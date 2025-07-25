@@ -18,9 +18,9 @@ website:
         text: Blog
     right:
       - icon: github
-        href: https://github.com/your-username
+        href: https://github.com/jsnyder82
       - icon: linkedin
-        href: https://linkedin.com/in/your-linkedin
+        href: https://linkedin.com/in/jayna-snyder
   page-footer:
     left: "© 2025 Jayna Snyder"
     right: "Built with ❤ + [Quarto](https://quarto.org)"
