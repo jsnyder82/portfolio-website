@@ -7,7 +7,7 @@ format:
     code-fold: true
     code-tools: true
 website:
-  title: "Jayna's Portfolio"
+  title: "Jayna Snyder"
   navbar:
     left:
       - href: index.qmd
