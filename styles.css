@@ -1,15 +1,42 @@
 body {
   font-family: 'Fira Sans', sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  background-color: #fff6e8;
+  color: #1c0108;
 }
-h1, h2, h3 {
-  color: #38519c;
+h1 {
+  color: #9c3845;
+  letter-spacing: 0.05em;
+}
+h2, h3 {
+  color: #EA5B6F;
+>>>>>>> site-edits
 }
 a {
-  color: #007acc;
+  color: #77BEF0;
 }
+
+.page-footer {
+  background-color: #fff6e8;
+  color: #cf9da4;
+}
+
 .navbar {
-  background-color: #ffffff;
-  border-bottom: 1px solid #91adff;
+  background-color: #fff6e8;
+  border-bottom: 1px solid #FFA673;
+  color: #cf9da4;
+  color
 }
+.navbar-title {
+  color: #cf9da4;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.navbar-nav > li > a:hover {
+  color: #9c3845;           /* darker color on hover */
+  text-decoration: underline;
+}
+
+
+
