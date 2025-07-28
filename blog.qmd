@@ -4,14 +4,13 @@ title: "Blog"
 
 Welcome to my blog! Check in for posts about data, design, and the creative process behind my projects.
 
--------------------------------------------------------------------------
 ## Some Thoughts on Gen Z and AI
 
 My generation has grown up in a world where almost any information we could ever want to know is only a few clicks away. Take any given day, usually mid conversation, I'll realize I don't know something, and if the person I'm talking to doesn't know either, I usually say, "I'm gonna look it up".
 
-I want to know the correct answer, not just the speculation of someone (my friend) who's far from an expert. The amazing thing is I can find out the real answer, with just a few taps on a screen. Well I can find out one answer, and
+I want to know the correct answer, not just the speculation of someone (my friend) who's far from an expert. The amazing thing is I can find out the real answer, with just a few taps on a screen. Well I can find out one answer,
 
-another answer from three news articles about the topic,
+and another answer from three news articles about the topic,
 
 another answer from a nonprofit's website,
 
@@ -29,29 +28,30 @@ and of course six different companies trying to sell me whatever it is I've look
 
 There is so much data on the internet, and so many answers. Growing up, I remember being taught that if I could find three sources that say the same thing, that it's probably the right answer. I was 10, and doing a research project on giraffes. With all the information and data out there, three sources might not be enough anymore. Not to mention what I want to know is a lot more complex than how tall a baby giraffe is.
 
-Not to worry though, now we have AI to aggregate and summarize all that information on the internet. It'll give you a concise answer and even show its sources. Great! Well, is it really? I mean yes it is, it saves time and it does make finding an answer easier. But, is easier always better? 
+Not to worry though, now we have AI to aggregate and summarize all that information on the internet. It'll give you a concise answer and even show its sources. Great! Well, is it really? I mean yes it is, it saves time and it does make finding an answer easier. But, is easier always better?
 
-I'm worried about my generation and the ones after mine. I'm worried that we will rely too heavily on AI, not only to answer our questions, but to make our decisions for us. I've already seen my friends use it for everything from help in school to answering their Hinge messages. If we're not careful, AI is going to turn into our toxic, co-dependent relationship. 
+I'm worried about my generation and the ones after mine. I'm worried that we will rely too heavily on AI, not only to answer our questions, but to make our decisions for us. I've already seen my friends use it for everything from help in school to answering their Hinge messages. If we're not careful, AI is going to turn into our toxic, co-dependent relationship.
 
 My generation needs to set some very intentional boundaries with AI. The widespread availability of AI is amazing, but it also creates a big challenge for us. That challenge is having the awareness and discipline to know when **not** to use it. We need to remember that AI is a tool, and should only be used as such.
 
-I could go rambling on about why we need to spend more time in the real world and less in the virtual one, but for now I'll leave it at that. 
+I could go rambling on about why we need to spend more time in the real world and less in the virtual one, but for now I'll leave it at that.
 
-  Love,
+Love, 
     a laughably anti-tech tech girl
     
--------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+
 ## Why I Think Data Viz is Cool
 
-Lately, I've been trying to navigate through the differences in data science, data analytics, data engineering, and all the other options for careers generally dealing with data. Throughout all of the different roles and responsibilities, my favorite data skill has to be data visualization. 
+Lately, I've been trying to navigate through the differences in data science, data analytics, data engineering, and all the other options for careers generally dealing with data. Throughout all of the different roles and responsibilities, my favorite data skill has to be data visualization.
 
-I've always been really interested in art, color theory, visual aesthetics, fashion, and general design. In high school I even seriously explored being a graphic design major, and as a little kid I wanted to animate movies. Another two things I have always loved are puzzles and math. In college, I've really enjoyed learning to code because it's a bit of both puzzles and math. Adding it all together, we get to data visualizations. It's a perfect combination of all the things I find fascinating. Time flies by when I'm working on any data visualizations. 
+I've always been really interested in art, color theory, visual aesthetics, fashion, and general design. In high school I even seriously explored being a graphic design major, and as a little kid I wanted to animate movies. Another two things I have always loved are puzzles and math. In college, I've really enjoyed learning to code because it's a bit of both puzzles and math. Adding it all together, we get to data visualizations. It's a perfect combination of all the things I find fascinating. Time flies by when I'm working on any data visualizations.
 
-Another thing to know about me is that I love to help, which really is the nail in the coffin for my love of data visualizations. The whole point of creating good data visualizations is that they help people understand complex information. 
+Another thing to know about me is that I love to help, which really is the nail in the coffin for my love of data visualizations. The whole point of creating good data visualizations is that they help people understand complex information.
 
-I want my career to be contributing to the world in a way I think is important. 
+I want my career to be contributing to the world in a way I think is important.
 
-If you read my thoughts on gen Z and AI, you'll know I think my generation needs some help maintaining our critical thinking skills (aka not letting AI make all of our decisions for us). What follows is my thought process on how creating more data visualizations on current, informative topics would be of benefit to young people. 
+If you read my thoughts on gen Z and AI, you'll know I think my generation needs some help maintaining our critical thinking skills (aka not letting AI make all of our decisions for us). What follows is my thought process on how creating more data visualizations on current, informative topics would be of benefit to young people.
 
 Naturally, I began to think about how I could apply my skills to help my generation and the future ones continue to make informed decisions for themselves. Thinking through my given information (or knowns, thanks math), we've got,
 
@@ -61,13 +61,8 @@ Naturally, I began to think about how I could apply my skills to help my generat
 
 With this information, I thought back through my question. How can I help people get engaged in interacting with information to make their own decisions? Well, with the target audience in mind, it seems obvious: make the information visual. While a histogram is never going to keep up with a TikTok video, if it's visually aesthetic, easy to read, and clearly communicates relevant information, at least people can look at it and learn something, which is a win in my book. If it can highlight some frequently overlooked information, or lead one's eye to an important pattern even better. If it makes even one person stop and think a little deeper about the topic, and why such a pattern might emerge, that's hitting the jackpot.
 
-Now, keep in mind data visualizations can easily be skewed (math pun unintended, but it made me laugh, so it stays) to make comparisons seem more drastic than they really are, just by omitting zero in the y-axis. If it becomes overly visual and dynamic, it can distract from the content, or even worse just be confusing and hard to read. Use the wrong color combination and anyone who is color blind won't be able to understand the visual. If someone doesn't write alternate text, visually impaired people won't get the information. Needless to say, there are many ways data visualizations can go wrong, and not serve their original purpose, which is to communicate important information in an easily digestible way. 
+Now, keep in mind data visualizations can easily be skewed (math pun unintended, but it made me laugh, so it stays) to make comparisons seem more drastic than they really are, just by omitting zero in the y-axis. If it becomes overly visual and dynamic, it can distract from the content, or even worse just be confusing and hard to read. Use the wrong color combination and anyone who is color blind won't be able to understand the visual. If someone doesn't write alternate text, visually impaired people won't get the information. Needless to say, there are many ways data visualizations can go wrong, and not serve their original purpose, which is to communicate important information in an easily digestible way.
 
+I want to create relevant and engaging data visualizations, so that all people can continue to make their own well-informed decisions, and focus on living in the real world instead of a virtual one.
 
-
-I want to create relevant and engaging data visualizations, so that all people can continue to make their own well-informed decisions, and focus on living in the real world instead of a virtual one.  
-
-  Love,
-    a laughably anti-tech tech girl
-
-
+Love, a data viz enthusiast
