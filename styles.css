@@ -41,6 +41,7 @@ a {
 /* Card formatting on project page */
 .card {
   min-height: 300px;
+  width: 300px;
   padding: 1rem;
   background-color: #fff;
   border-radius: 12px;
@@ -60,3 +61,7 @@ a {
   margin-bottom: 0.75rem;
 }
 
+/* Change background color for project pages */
+body.project-page {
+  background-color: #fff; 
+}

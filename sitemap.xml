@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jsnyder82.github.io/portfolio-website/blog.html</loc>
-    <lastmod>2025-07-29T03:04:16.907Z</lastmod>
+    <loc>https://jsnyder82.github.io/portfolio-website/projects-folder/COPD_gene_project.html</loc>
+    <lastmod>2025-08-06T17:58:18.122Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jsnyder82.github.io/portfolio-website/projects.html</loc>
+    <lastmod>2025-08-06T18:18:23.943Z</lastmod>
   </url>
   <url>
     <loc>https://jsnyder82.github.io/portfolio-website/index.html</loc>
     <lastmod>2025-07-28T16:10:29.480Z</lastmod>
   </url>
   <url>
-    <loc>https://jsnyder82.github.io/portfolio-website/projects.html</loc>
-    <lastmod>2025-08-06T18:12:43.685Z</lastmod>
+    <loc>https://jsnyder82.github.io/portfolio-website/blog.html</loc>
+    <lastmod>2025-07-29T03:04:16.907Z</lastmod>
   </url>
 </urlset>
