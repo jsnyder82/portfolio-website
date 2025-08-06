@@ -275,75 +275,59 @@ window.Quarto = {
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#import COPD demographics data from CSV file</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>COPD_demographics <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/khasenst/datasets_teaching/refs/heads/main/copd_data_demographics.csv"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(COPD_demographics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str</span>(COPD_demographics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>     sid visit_year visit_date visit_age gender race smoking_status height_cm
-1 10005Q       2008  1/15/2008      54.5      2    1              2     159.9
-2 10055F       2008  3/15/2008      69.0      1    2              1     178.0
-3 10056H       2008  2/15/2008      48.7      2    1              1     153.7
-4 10060Y       2008  5/15/2008      72.8      1    1              1     177.0
-5 10068O       2008  3/15/2008      76.2      2    1              1     155.0
-6 10072F       2008  3/15/2008      70.0      2    1              1     165.1
-  weight_kg blood_pressure_systolic blood_pressure_diastolic heart_rate
-1      73.0                     130                       80         87
-2      90.7                     168                      100         55
-3      86.2                     100                       53         98
-4      89.6                     147                       71         87
-5      55.0                     134                       78         92
-6      76.1                      92                       58         77
-  hours_on_oxygen   bmi smoke_start_age cigs_per_day_avg duration_smoking
-1               0 28.55              14               20             40.5
-2               0 28.63              18               20             20.0
-3              24 36.49              12               40             36.0
-4              24 28.60              17               30             54.0
-5               0 22.89              18               20             52.0
-6              12 27.92              16               40             48.0
-                                                                        respiratory
-1                                                                                  
-2                                                                         hay fever
-3 asthma|bronchitis attacks|chronic bronchitis|pneumonia|emphysema|copd|sleep apnea
-4                       asthma|bronchitis attacks|chronic bronchitis|emphysema|copd
-5          hay fever|bronchitis attacks|chronic bronchitis|pneumonia|emphysema|copd
-6                                                          pneumonia|emphysema|copd</code></pre>
+<pre><code>'data.frame':   2620 obs. of  18 variables:
+ $ sid                     : chr  "10005Q" "10055F" "10056H" "10060Y" ...
+ $ visit_year              : int  2008 2008 2008 2008 2008 2008 2008 2008 2008 2008 ...
+ $ visit_date              : chr  "1/15/2008" "3/15/2008" "2/15/2008" "5/15/2008" ...
+ $ visit_age               : num  54.5 69 48.7 72.8 76.2 70 61.8 69.6 47.8 71.5 ...
+ $ gender                  : int  2 1 2 1 2 2 1 2 1 1 ...
+ $ race                    : int  1 2 1 1 1 1 1 1 1 1 ...
+ $ smoking_status          : int  2 1 1 1 1 1 1 1 2 1 ...
+ $ height_cm               : num  160 178 154 177 155 ...
+ $ weight_kg               : num  73 90.7 86.2 89.6 55 ...
+ $ blood_pressure_systolic : int  130 168 100 147 134 92 108 144 139 140 ...
+ $ blood_pressure_diastolic: int  80 100 53 71 78 58 78 90 90 75 ...
+ $ heart_rate              : int  87 55 98 87 92 77 72 110 87 73 ...
+ $ hours_on_oxygen         : int  0 0 24 24 0 12 0 0 0 24 ...
+ $ bmi                     : num  28.6 28.6 36.5 28.6 22.9 ...
+ $ smoke_start_age         : int  14 18 12 17 18 16 13 16 19 13 ...
+ $ cigs_per_day_avg        : int  20 20 40 30 20 40 20 20 20 20 ...
+ $ duration_smoking        : num  40.5 20 36 54 52 48 17 30 28.8 57 ...
+ $ respiratory             : chr  "" "hay fever" "asthma|bronchitis attacks|chronic bronchitis|pneumonia|emphysema|copd|sleep apnea" "asthma|bronchitis attacks|chronic bronchitis|emphysema|copd" ...</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#import COPD medical images data from JSON file</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>COPD_medical_images <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(<span class="st">"https://raw.githubusercontent.com/khasenst/datasets_teaching/refs/heads/main/copd_data_imaging.json"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(COPD_medical_images)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str</span>(COPD_medical_images)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>     sid lung_volume_inspiratory emphysema_percentage lung_volume_expiratory
-1 24838L                  4.1956               1.3740                 2.2976
-2 14901M                  5.7800               3.7793                 2.9900
-3 11357A                  5.4958               4.7153                 2.7493
-4 20152J                  4.9409               8.4237                 3.2121
-5 21437E                  4.6451               0.0600                 2.9805
-6 15807Z                  5.6987               2.1956                 3.0119
-  gas_trapping_percentage mean_density_inspiratory mean_density_expiratory
-1                 10.5587                 -829.631                -684.559
-2                 11.6639                 -836.006                -674.285
-3                 16.9214                 -855.705                -727.824
-4                 39.4071                 -850.767                -777.023
-5                  2.6216                 -762.127                -656.432
-6                 12.5120                 -844.875                -710.280</code></pre>
+<pre><code>'data.frame':   2610 obs. of  7 variables:
+ $ sid                     : chr  "24838L" "14901M" "11357A" "20152J" ...
+ $ lung_volume_inspiratory : num  4.2 5.78 5.5 4.94 4.65 ...
+ $ emphysema_percentage    : num  1.37 3.78 4.72 8.42 0.06 ...
+ $ lung_volume_expiratory  : num  2.3 2.99 2.75 3.21 2.98 ...
+ $ gas_trapping_percentage : num  10.56 11.66 16.92 39.41 2.62 ...
+ $ mean_density_inspiratory: num  -830 -836 -856 -851 -762 ...
+ $ mean_density_expiratory : num  -685 -674 -728 -777 -656 ...</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#import COPD spirometry data from HTML file</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">"https://raw.githubusercontent.com/khasenst/datasets_teaching/refs/heads/main/copd_data_spirometry.html"</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>COPD_spirometry <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">html_table</span>(html)[[<span class="dv">1</span>]])</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(COPD_spirometry)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str</span>(COPD_spirometry)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>     sid fev1_fvc_ratio  fev1   fvc fev1_phase2
-1 22035P           0.62 3.672 5.954       3.484
-2 25109H           0.81 1.968 2.432       2.049
-3 10127E           0.83 2.319 2.788       2.133
-4 15450K           0.51 2.398 4.745       1.424
-5 13689J           0.75 3.938 5.273       3.571
-6 15749L           0.81 2.784 3.446       2.309</code></pre>
+<pre><code>'data.frame':   2610 obs. of  5 variables:
+ $ sid           : chr  "22035P" "25109H" "10127E" "15450K" ...
+ $ fev1_fvc_ratio: num  0.62 0.81 0.83 0.51 0.75 0.81 0.31 0.76 0.81 0.82 ...
+ $ fev1          : num  3.67 1.97 2.32 2.4 3.94 ...
+ $ fvc           : num  5.95 2.43 2.79 4.75 5.27 ...
+ $ fev1_phase2   : num  3.48 2.05 2.13 1.42 3.57 ...</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -531,7 +515,7 @@ window.Quarto = {
 <span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co">#test function for numeric and factor variables</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># test function on categorical variable</span></span>
 <span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="fu">stats</span>(COPD_data_clean<span class="sc">$</span>asthma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -541,7 +525,8 @@ window.Quarto = {
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stats</span>(COPD_data_clean<span class="sc">$</span>bmi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test function on numeric variable</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">stats</span>(COPD_data_clean<span class="sc">$</span>bmi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>$mean
@@ -1475,7 +1460,7 @@ There appears to be a strong positive linear relationship between FVC and Phase 
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>      2.5%      97.5% 
--0.6813778 -0.5660617 </code></pre>
+-0.6824727 -0.5634880 </code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -1490,7 +1475,7 @@ There appears to be a strong positive linear relationship between FVC and Phase 
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>      2.5%      97.5% 
-0.08898273 0.21752134 </code></pre>
+0.08878847 0.21464695 </code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -1505,7 +1490,7 @@ There appears to be a strong positive linear relationship between FVC and Phase 
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>       2.5%       97.5% 
--0.04153301  0.09528336 </code></pre>
+-0.04635570  0.09434143 </code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -1520,7 +1505,7 @@ There appears to be a strong positive linear relationship between FVC and Phase 
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>     2.5%     97.5% 
-0.4303790 0.5813565 </code></pre>
+0.4223232 0.5878046 </code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -1535,7 +1520,7 @@ There appears to be a strong positive linear relationship between FVC and Phase 
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>     2.5%     97.5% 
-0.9241181 1.0412982 </code></pre>
+0.9181392 1.0448886 </code></pre>
 </div>
 </div>
 <p>Based on the bootstrapped confidence intervals I created, I can conclude that:</p>
@@ -2158,16 +2143,16 @@ There appears to be a strong positive linear relationship between FVC and Phase 
 <span id="cb96-42"><a href="#cb96-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r load datasets}</span></span>
 <span id="cb96-43"><a href="#cb96-43" aria-hidden="true" tabindex="-1"></a><span class="co">#import COPD demographics data from CSV file</span></span>
 <span id="cb96-44"><a href="#cb96-44" aria-hidden="true" tabindex="-1"></a>COPD_demographics <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/khasenst/datasets_teaching/refs/heads/main/copd_data_demographics.csv"</span>)</span>
-<span id="cb96-45"><a href="#cb96-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(COPD_demographics)</span>
+<span id="cb96-45"><a href="#cb96-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str</span>(COPD_demographics)</span>
 <span id="cb96-46"><a href="#cb96-46" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb96-47"><a href="#cb96-47" aria-hidden="true" tabindex="-1"></a><span class="co">#import COPD medical images data from JSON file</span></span>
 <span id="cb96-48"><a href="#cb96-48" aria-hidden="true" tabindex="-1"></a>COPD_medical_images <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(<span class="st">"https://raw.githubusercontent.com/khasenst/datasets_teaching/refs/heads/main/copd_data_imaging.json"</span>)</span>
-<span id="cb96-49"><a href="#cb96-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(COPD_medical_images)</span>
+<span id="cb96-49"><a href="#cb96-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str</span>(COPD_medical_images)</span>
 <span id="cb96-50"><a href="#cb96-50" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb96-51"><a href="#cb96-51" aria-hidden="true" tabindex="-1"></a><span class="co">#import COPD spirometry data from HTML file</span></span>
 <span id="cb96-52"><a href="#cb96-52" aria-hidden="true" tabindex="-1"></a>html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">"https://raw.githubusercontent.com/khasenst/datasets_teaching/refs/heads/main/copd_data_spirometry.html"</span>)</span>
 <span id="cb96-53"><a href="#cb96-53" aria-hidden="true" tabindex="-1"></a>COPD_spirometry <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">html_table</span>(html)[[<span class="dv">1</span>]])</span>
-<span id="cb96-54"><a href="#cb96-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(COPD_spirometry)</span>
+<span id="cb96-54"><a href="#cb96-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str</span>(COPD_spirometry)</span>
 <span id="cb96-55"><a href="#cb96-55" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb96-56"><a href="#cb96-56" aria-hidden="true" tabindex="-1"></a><span class="co">#import data dictionary</span></span>
 <span id="cb96-57"><a href="#cb96-57" aria-hidden="true" tabindex="-1"></a>COPD_data_dictionary <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/khasenst/datasets_teaching/refs/heads/main/copd_data_dictionary.csv"</span>)</span>
@@ -2277,367 +2262,368 @@ There appears to be a strong positive linear relationship between FVC and Phase 
 <span id="cb96-161"><a href="#cb96-161" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb96-162"><a href="#cb96-162" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb96-163"><a href="#cb96-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-164"><a href="#cb96-164" aria-hidden="true" tabindex="-1"></a><span class="co">#test function for numeric and factor variables</span></span>
+<span id="cb96-164"><a href="#cb96-164" aria-hidden="true" tabindex="-1"></a><span class="co"># test function on categorical variable</span></span>
 <span id="cb96-165"><a href="#cb96-165" aria-hidden="true" tabindex="-1"></a><span class="fu">stats</span>(COPD_data_clean<span class="sc">$</span>asthma)</span>
-<span id="cb96-166"><a href="#cb96-166" aria-hidden="true" tabindex="-1"></a><span class="fu">stats</span>(COPD_data_clean<span class="sc">$</span>bmi)</span>
-<span id="cb96-167"><a href="#cb96-167" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb96-168"><a href="#cb96-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-169"><a href="#cb96-169" aria-hidden="true" tabindex="-1"></a>**Apply the function to all columns**</span>
-<span id="cb96-170"><a href="#cb96-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-171"><a href="#cb96-171" aria-hidden="true" tabindex="-1"></a><span class="in">```{r apply function to all columns}</span></span>
-<span id="cb96-172"><a href="#cb96-172" aria-hidden="true" tabindex="-1"></a><span class="co"># apply function across columns except id column</span></span>
-<span id="cb96-173"><a href="#cb96-173" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(<span class="at">X =</span> COPD_data_clean[, <span class="fu">names</span>(COPD_data_clean) <span class="sc">!=</span> <span class="st">"sid"</span>], </span>
-<span id="cb96-174"><a href="#cb96-174" aria-hidden="true" tabindex="-1"></a>       <span class="at">FUN =</span> stats)</span>
-<span id="cb96-175"><a href="#cb96-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb96-176"><a href="#cb96-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-177"><a href="#cb96-177" aria-hidden="true" tabindex="-1"></a>I noticed that the following variables all report NA, so missing values need to be excluded for these variables:</span>
-<span id="cb96-178"><a href="#cb96-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-179"><a href="#cb96-179" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>lung_volume_inspiartory</span>
-<span id="cb96-180"><a href="#cb96-180" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>emphysema_percentage</span>
-<span id="cb96-181"><a href="#cb96-181" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>lung_volume_expiratory</span>
-<span id="cb96-182"><a href="#cb96-182" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>gas_trapping_percentage</span>
-<span id="cb96-183"><a href="#cb96-183" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>mean_density_inspiratory</span>
-<span id="cb96-184"><a href="#cb96-184" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>mean_density_expiratory</span>
-<span id="cb96-185"><a href="#cb96-185" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>fev1_fvc_ratio</span>
-<span id="cb96-186"><a href="#cb96-186" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>fev1</span>
-<span id="cb96-187"><a href="#cb96-187" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>fvc</span>
-<span id="cb96-188"><a href="#cb96-188" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>fev1_phase2</span>
-<span id="cb96-189"><a href="#cb96-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-190"><a href="#cb96-190" aria-hidden="true" tabindex="-1"></a>**Remove missing values and rerun descriptive statistics**</span>
-<span id="cb96-191"><a href="#cb96-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-192"><a href="#cb96-192" aria-hidden="true" tabindex="-1"></a><span class="in">```{r remove missing values}</span></span>
-<span id="cb96-193"><a href="#cb96-193" aria-hidden="true" tabindex="-1"></a><span class="co">#remove rows with missing values, complete.cases returns true for each row that contains values in all columns</span></span>
-<span id="cb96-194"><a href="#cb96-194" aria-hidden="true" tabindex="-1"></a>COPD_data_clean <span class="ot">&lt;-</span> COPD_data_clean[ <span class="fu">complete.cases</span>(COPD_data_clean) , ]</span>
-<span id="cb96-195"><a href="#cb96-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-196"><a href="#cb96-196" aria-hidden="true" tabindex="-1"></a><span class="co">#check stats now return values instead of NA</span></span>
-<span id="cb96-197"><a href="#cb96-197" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(COPD_data_clean[ , <span class="fu">names</span>(COPD_data_clean) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"lung_volume_inspiratory"</span>, <span class="st">"emphysema_percentage"</span>,</span>
-<span id="cb96-198"><a href="#cb96-198" aria-hidden="true" tabindex="-1"></a>  <span class="st">"lung_volume_expiratory"</span>, <span class="st">"gas_trapping_percentage"</span>, <span class="st">"mean_density_inspiratory"</span>, <span class="st">"mean_density_expiratory"</span>,</span>
-<span id="cb96-199"><a href="#cb96-199" aria-hidden="true" tabindex="-1"></a>  <span class="st">"fev1_fvc_ratio"</span>, <span class="st">"fev1"</span>, <span class="st">"fvc"</span>, <span class="st">"fev1_phase2"</span> ) ], stats)</span>
-<span id="cb96-200"><a href="#cb96-200" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb96-201"><a href="#cb96-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-202"><a href="#cb96-202" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Visualizing numeric variables with histograms</span></span>
-<span id="cb96-203"><a href="#cb96-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-204"><a href="#cb96-204" aria-hidden="true" tabindex="-1"></a><span class="in">```{r histograms for numeric variables}</span></span>
-<span id="cb96-205"><a href="#cb96-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-206"><a href="#cb96-206" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (col <span class="cf">in</span> <span class="fu">names</span>(COPD_data_clean)) {</span>
-<span id="cb96-207"><a href="#cb96-207" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span>(<span class="fu">is.numeric</span>(COPD_data_clean[,col]) <span class="sc">|</span> <span class="fu">is.integer</span>(COPD_data_clean[,col])){</span>
-<span id="cb96-208"><a href="#cb96-208" aria-hidden="true" tabindex="-1"></a>   plot <span class="ot">&lt;-</span>  <span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> .data[[col]])) <span class="sc">+</span></span>
-<span id="cb96-209"><a href="#cb96-209" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb96-210"><a href="#cb96-210" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste</span>(<span class="st">"Frequency of"</span>, col)) <span class="sc">+</span> </span>
-<span id="cb96-211"><a href="#cb96-211" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme_light</span>()</span>
-<span id="cb96-212"><a href="#cb96-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-213"><a href="#cb96-213" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(plot)</span>
-<span id="cb96-214"><a href="#cb96-214" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb96-215"><a href="#cb96-215" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb96-216"><a href="#cb96-216" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb96-217"><a href="#cb96-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-218"><a href="#cb96-218" aria-hidden="true" tabindex="-1"></a>The following variables are highly skewed:</span>
-<span id="cb96-219"><a href="#cb96-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-220"><a href="#cb96-220" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>fev1_fvc_ratio (left-skewed)</span>
-<span id="cb96-221"><a href="#cb96-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-222"><a href="#cb96-222" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>gas_trapping_percentage (right-skewed)</span>
-<span id="cb96-223"><a href="#cb96-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-224"><a href="#cb96-224" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>lung_volume_expiratory (right-skewed)</span>
-<span id="cb96-225"><a href="#cb96-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-226"><a href="#cb96-226" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>emphysema_percentage (right-skewed)</span>
-<span id="cb96-227"><a href="#cb96-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-228"><a href="#cb96-228" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>cigs_per_day_avg (right-skewed)</span>
-<span id="cb96-229"><a href="#cb96-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-230"><a href="#cb96-230" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>hours_on_oxygen (right-skewed)</span>
-<span id="cb96-231"><a href="#cb96-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-232"><a href="#cb96-232" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>smoke_start_age (right-skewed)</span>
-<span id="cb96-233"><a href="#cb96-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-234"><a href="#cb96-234" aria-hidden="true" tabindex="-1"></a>I decided the best transformation for each variable by plotting histograms of the transformed variables to see which transformation created the most normal shaped (least skewed) distribution.</span>
-<span id="cb96-235"><a href="#cb96-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-236"><a href="#cb96-236" aria-hidden="true" tabindex="-1"></a>**Transform Variables and Recreate Histograms**</span>
-<span id="cb96-237"><a href="#cb96-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-238"><a href="#cb96-238" aria-hidden="true" tabindex="-1"></a><span class="in">```{r transform skewed variables}</span></span>
-<span id="cb96-239"><a href="#cb96-239" aria-hidden="true" tabindex="-1"></a><span class="co">#transform skewed variables</span></span>
-<span id="cb96-240"><a href="#cb96-240" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>fev1_fvc_ratio_squared <span class="ot">&lt;-</span> (COPD_data_clean<span class="sc">$</span>fev1_fvc_ratio)<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb96-241"><a href="#cb96-241" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>gas_trapping_percentage_sqrt <span class="ot">&lt;-</span>  <span class="fu">sqrt</span>(COPD_data_clean<span class="sc">$</span>gas_trapping_percentage)</span>
-<span id="cb96-242"><a href="#cb96-242" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>lung_volume_expiratory_log <span class="ot">&lt;-</span> <span class="fu">log</span>(COPD_data_clean<span class="sc">$</span>lung_volume_expiratory)</span>
-<span id="cb96-243"><a href="#cb96-243" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>emphysema_percentage_log <span class="ot">&lt;-</span> <span class="fu">log</span>(COPD_data_clean<span class="sc">$</span>emphysema_percentage)</span>
-<span id="cb96-244"><a href="#cb96-244" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>cigs_per_day_avg_log <span class="ot">&lt;-</span> <span class="fu">log</span>(COPD_data_clean<span class="sc">$</span>cigs_per_day_avg)</span>
-<span id="cb96-245"><a href="#cb96-245" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>smoke_start_age_log <span class="ot">&lt;-</span> <span class="fu">log</span>(COPD_data_clean<span class="sc">$</span>smoke_start_age)</span>
-<span id="cb96-246"><a href="#cb96-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-247"><a href="#cb96-247" aria-hidden="true" tabindex="-1"></a>transformed_vars <span class="ot">&lt;-</span> COPD_data_clean[, <span class="fu">names</span>(COPD_data_clean) <span class="sc">%in%</span></span>
-<span id="cb96-248"><a href="#cb96-248" aria-hidden="true" tabindex="-1"></a>                                      <span class="fu">c</span>(<span class="st">"fev1_fvc_ratio_squared"</span>,</span>
-<span id="cb96-249"><a href="#cb96-249" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"gas_trapping_percentage_sqrt"</span>,</span>
-<span id="cb96-250"><a href="#cb96-250" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"lung_volume_expiratory_log"</span>,</span>
-<span id="cb96-251"><a href="#cb96-251" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"emphysema_percentage_log"</span>,</span>
-<span id="cb96-252"><a href="#cb96-252" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"cigs_per_day_avg_log"</span>,</span>
-<span id="cb96-253"><a href="#cb96-253" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"smoke_start_age_log"</span>)]</span>
-<span id="cb96-254"><a href="#cb96-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-255"><a href="#cb96-255" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (col <span class="cf">in</span> <span class="fu">names</span>(transformed_vars)) {</span>
-<span id="cb96-256"><a href="#cb96-256" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span>(<span class="fu">is.numeric</span>(COPD_data_clean[,col]) <span class="sc">|</span> <span class="fu">is.integer</span>(COPD_data_clean[,col])){</span>
-<span id="cb96-257"><a href="#cb96-257" aria-hidden="true" tabindex="-1"></a>   plot <span class="ot">&lt;-</span>  <span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> .data[[col]])) <span class="sc">+</span></span>
-<span id="cb96-258"><a href="#cb96-258" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">fill =</span> <span class="st">"darkgreen"</span>) <span class="sc">+</span></span>
-<span id="cb96-259"><a href="#cb96-259" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste</span>(<span class="st">"Frequency of"</span>, col)) <span class="sc">+</span> </span>
-<span id="cb96-260"><a href="#cb96-260" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme_light</span>()</span>
-<span id="cb96-261"><a href="#cb96-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-262"><a href="#cb96-262" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(plot)</span>
-<span id="cb96-263"><a href="#cb96-263" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb96-264"><a href="#cb96-264" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb96-265"><a href="#cb96-265" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb96-266"><a href="#cb96-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-267"><a href="#cb96-267" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Visualize Categorical Variables by Phase 2 FEV1 Scores</span></span>
-<span id="cb96-268"><a href="#cb96-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-269"><a href="#cb96-269" aria-hidden="true" tabindex="-1"></a><span class="in">```{r visualize categorical vars by phase 2 FEV1}</span></span>
-<span id="cb96-270"><a href="#cb96-270" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizing Phase 2 FEV1 scores by categorical variables</span></span>
-<span id="cb96-271"><a href="#cb96-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-272"><a href="#cb96-272" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> gender, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
-<span id="cb96-273"><a href="#cb96-273" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb96-274"><a href="#cb96-274" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 vs. Gender"</span>, <span class="at">x =</span> <span class="st">"Gender"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
-<span id="cb96-275"><a href="#cb96-275" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
-<span id="cb96-276"><a href="#cb96-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-277"><a href="#cb96-277" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> smoking_status, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
-<span id="cb96-278"><a href="#cb96-278" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb96-279"><a href="#cb96-279" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 vs. Smoking Status"</span>, <span class="at">x =</span> <span class="st">"Smoking Status"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
-<span id="cb96-280"><a href="#cb96-280" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
-<span id="cb96-281"><a href="#cb96-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-282"><a href="#cb96-282" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> hay_fever, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
-<span id="cb96-283"><a href="#cb96-283" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb96-284"><a href="#cb96-284" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 vs. Hay Fever"</span>, <span class="at">x =</span> <span class="st">"Hay Fever"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
-<span id="cb96-285"><a href="#cb96-285" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
-<span id="cb96-286"><a href="#cb96-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-287"><a href="#cb96-287" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> asthma, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
-<span id="cb96-288"><a href="#cb96-288" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb96-289"><a href="#cb96-289" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 vs. Asthma"</span>, <span class="at">x =</span> <span class="st">"Asthma"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
-<span id="cb96-290"><a href="#cb96-290" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
-<span id="cb96-291"><a href="#cb96-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-292"><a href="#cb96-292" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> copd, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
-<span id="cb96-293"><a href="#cb96-293" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb96-294"><a href="#cb96-294" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Score vs. COPD"</span>, <span class="at">x =</span> <span class="st">"COPD"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1 Score"</span>) <span class="sc">+</span> </span>
-<span id="cb96-295"><a href="#cb96-295" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
-<span id="cb96-296"><a href="#cb96-296" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb96-297"><a href="#cb96-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-298"><a href="#cb96-298" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Gender** There does appear to be a difference in phase 2 FEV1 score in females versus males. For females, the median phase2_fev1 is just under 2, with maximum scores up to about 3.5. For males, the median phase2_fev1 score is higher, just above 2.5, with maximum scores up to about 5. Male phase2_fev1 scores have higher variability than that for females. Neither group has outliers, and both groups have symmetrical distributions.</span>
-<span id="cb96-299"><a href="#cb96-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-300"><a href="#cb96-300" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Smoking Status** There does not appear to be a difference in phase 2 FEV1 scores between former smokers and current smokers. Both groups have median phase2_fev1 of about 2.2, with some high outliers around 4.5 and 5. The current smoker group has slightly smaller range and variability. There is no data for nonsmokers in the dataset, so there is no way to know if there is a difference in FEV1 scores for nonsmokers.</span>
-<span id="cb96-301"><a href="#cb96-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-302"><a href="#cb96-302" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Hay Fever** There does not appear to be any difference in phase 2 FEV1 scores for patients with or without hay fever. Patients with hay fever ("Yes" group) and patients without hay fever("No" group) have a median phase 2 FEV1 score of about 2.2. Both groups have very similar variability, with range of about 4.6. Both groups have a few high outliers above 4.5. and otherwise symmetrical distributions.</span>
-<span id="cb96-303"><a href="#cb96-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-304"><a href="#cb96-304" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Asthma** There appears to be a difference in phase 2 FEV1 scores between patients with and without asthma. The group of patients without asthma ("No" group) has a higher median phase 2 FEV1 score around 2.2, a symmetrical distribution with roughly 7 high outliers above 4.5. The group of patients with asthma ("Yes" group) has a lower median phase 2 FEV1 score of about 1.75, a smaller range, and more symmetrical distribution than the "No" group, with only 1 outlier at about 4.8.</span>
-<span id="cb96-305"><a href="#cb96-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-306"><a href="#cb96-306" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. COPD** There appears to be a difference in phase 2 FEV1 scores between patients with and without COPD. The group of patients without COPD, ("No" group) has a median phase 2 FEV1 score of about 2.4, a range of 4.5, and roughly symmetrical distribution other than the high outliers around scores 0f 4.5 to 5. The group of patients with COPD ("Yes" group) has a lower median phase 2 FEV1 score of about 1.4, a smaller range of about 4, and a slightly more right-skewed distribution.</span>
-<span id="cb96-307"><a href="#cb96-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-308"><a href="#cb96-308" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Visualize Numeric Variables by Phase 2 FEV1 Scores</span></span>
-<span id="cb96-309"><a href="#cb96-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-312"><a href="#cb96-312" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb96-313"><a href="#cb96-313" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot fev1_phase2 vs. lung volume inspiratory</span></span>
-<span id="cb96-314"><a href="#cb96-314" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> lung_volume_inspiratory , <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
-<span id="cb96-315"><a href="#cb96-315" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb96-316"><a href="#cb96-316" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Scores vs. Lung Volume Inspiratory"</span>, <span class="at">x =</span><span class="st">"Lung Volume Inspiratory (Liters)"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
-<span id="cb96-317"><a href="#cb96-317" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
-<span id="cb96-318"><a href="#cb96-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-319"><a href="#cb96-319" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot fev1_phase2 vs. lung volume expiratory</span></span>
-<span id="cb96-320"><a href="#cb96-320" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> lung_volume_expiratory_log, <span class="at">y =</span> fev1_phase2))<span class="sc">+</span></span>
-<span id="cb96-321"><a href="#cb96-321" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb96-322"><a href="#cb96-322" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Scores vs. Lung Volume Expiratory (log transformed)"</span>, <span class="at">x =</span> <span class="st">"Log of Lung Volume Expiratory (Liters)"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
-<span id="cb96-323"><a href="#cb96-323" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
-<span id="cb96-324"><a href="#cb96-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-325"><a href="#cb96-325" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot fev1_phase2 vs. duration smoking</span></span>
-<span id="cb96-326"><a href="#cb96-326" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> duration_smoking, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
-<span id="cb96-327"><a href="#cb96-327" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb96-328"><a href="#cb96-328" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Scores vs. Duration Smoking"</span>, <span class="at">x =</span> <span class="st">"Duration Smoking (Years)"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
-<span id="cb96-329"><a href="#cb96-329" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
-<span id="cb96-330"><a href="#cb96-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-331"><a href="#cb96-331" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot fev1_phase2 vs. average number of cigarettes per day</span></span>
-<span id="cb96-332"><a href="#cb96-332" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> cigs_per_day_avg_log, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
-<span id="cb96-333"><a href="#cb96-333" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb96-334"><a href="#cb96-334" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Scores vs. Avg Cigs per Day (log transformed)"</span>, <span class="at">x =</span> <span class="st">"Log Avg Cigs per Day"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
-<span id="cb96-335"><a href="#cb96-335" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
-<span id="cb96-336"><a href="#cb96-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-337"><a href="#cb96-337" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Plot fev1_phase2 vs. Forced Vital Capacity (FVC)</span></span>
-<span id="cb96-338"><a href="#cb96-338" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> fvc , <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
-<span id="cb96-339"><a href="#cb96-339" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb96-340"><a href="#cb96-340" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Scores vs. FVC"</span>, <span class="at">x =</span> <span class="st">"FVC"</span>, <span class="at">y=</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
-<span id="cb96-341"><a href="#cb96-341" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
-<span id="cb96-342"><a href="#cb96-342" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb96-343"><a href="#cb96-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-344"><a href="#cb96-344" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Lung Volume Inspiratory** There appears to be a moderate positive linear relationship between lung volume inspiratory and phase 2 FEV1 scores. The most concentrated section of data points is around lung volume inspiratory between 4 and 6 liters and phase 2 FEV1 scores between 1.5 and 3.</span>
-<span id="cb96-345"><a href="#cb96-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-346"><a href="#cb96-346" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Log of Lung Volume Expiratory** There does not appear to be much of a relationship between lung volume expiratory and Phase 2 FEV1 scores, possibly a weak negative linear relationship, or a weak nonlinear relationship. The data is clustered around log transformed lung volume expiratory of 1, and phase 2 FEV1 score between 2 and 3.\</span>
-<span id="cb96-347"><a href="#cb96-347" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb96-348"><a href="#cb96-348" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Duration Smoking**\</span>
-<span id="cb96-349"><a href="#cb96-349" aria-hidden="true" tabindex="-1"></a>There appears to be a weak negative linear relationship between duration smoking in years and Phase 2 FEV1 scores. The data is centered around 30-50 years of smoking and phase 2 FEV1 scores between 1.5 and 3.\</span>
-<span id="cb96-350"><a href="#cb96-350" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb96-351"><a href="#cb96-351" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Log of Avg Cigs per Day**\</span>
-<span id="cb96-352"><a href="#cb96-352" aria-hidden="true" tabindex="-1"></a>There does not appear to be any relationship between the average number of cigarettes smoked per day and phase 2 FEV1 scores. There is slightly less variability in phase 2 FEV1 scores for log average cigs per day below 2 and above 4.\</span>
-<span id="cb96-353"><a href="#cb96-353" aria-hidden="true" tabindex="-1"></a>\</span>
-<span id="cb96-354"><a href="#cb96-354" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. FVC**\</span>
-<span id="cb96-355"><a href="#cb96-355" aria-hidden="true" tabindex="-1"></a>There appears to be a strong positive linear relationship between FVC and Phase 2 FEV1 scores. The data is most concentrated between FVC of 2 and 4 and phase 2 FEV1 scores between 1.5 and 3.</span>
-<span id="cb96-356"><a href="#cb96-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-357"><a href="#cb96-357" aria-hidden="true" tabindex="-1"></a><span class="fu">## Inference and Modeling</span></span>
-<span id="cb96-358"><a href="#cb96-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-359"><a href="#cb96-359" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Categorical Variables</span></span>
-<span id="cb96-360"><a href="#cb96-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-361"><a href="#cb96-361" aria-hidden="true" tabindex="-1"></a>Conduct a statistical test to determine if there is a significant difference in <span class="in">`fev1_phase2`</span> between groups from categorical variables previously visualized.</span>
-<span id="cb96-362"><a href="#cb96-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-363"><a href="#cb96-363" aria-hidden="true" tabindex="-1"></a><span class="in">```{r bootstrap confidence intervals as statistical test}</span></span>
-<span id="cb96-364"><a href="#cb96-364" aria-hidden="true" tabindex="-1"></a><span class="co"># To determine if there is significant difference in fev1_phase2 scores between groups, I will use bootstrapping to create confidence intervals</span></span>
-<span id="cb96-365"><a href="#cb96-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-366"><a href="#cb96-366" aria-hidden="true" tabindex="-1"></a><span class="co">#B = number of bootstrapped samples, n = sample size</span></span>
-<span id="cb96-367"><a href="#cb96-367" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
-<span id="cb96-368"><a href="#cb96-368" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(COPD_data_clean<span class="sc">$</span>fev1_phase2)</span>
-<span id="cb96-369"><a href="#cb96-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-370"><a href="#cb96-370" aria-hidden="true" tabindex="-1"></a><span class="co">#vectors to store mean differences</span></span>
-<span id="cb96-371"><a href="#cb96-371" aria-hidden="true" tabindex="-1"></a>gender_diffs  <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
-<span id="cb96-372"><a href="#cb96-372" aria-hidden="true" tabindex="-1"></a>smoking_diffs <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
-<span id="cb96-373"><a href="#cb96-373" aria-hidden="true" tabindex="-1"></a>hayfev_diffs  <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
-<span id="cb96-374"><a href="#cb96-374" aria-hidden="true" tabindex="-1"></a>asthma_diffs  <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
-<span id="cb96-375"><a href="#cb96-375" aria-hidden="true" tabindex="-1"></a>copd_diffs    <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
-<span id="cb96-376"><a href="#cb96-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-377"><a href="#cb96-377" aria-hidden="true" tabindex="-1"></a><span class="co"># create B = 1000 samples</span></span>
-<span id="cb96-378"><a href="#cb96-378" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>B) {</span>
-<span id="cb96-379"><a href="#cb96-379" aria-hidden="true" tabindex="-1"></a>  <span class="co"># create random sample of dataset with replacement</span></span>
-<span id="cb96-380"><a href="#cb96-380" aria-hidden="true" tabindex="-1"></a>  boot_indexes <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>n, <span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb96-381"><a href="#cb96-381" aria-hidden="true" tabindex="-1"></a>  boot_sample <span class="ot">&lt;-</span> COPD_data_clean[boot_indexes, ]</span>
-<span id="cb96-382"><a href="#cb96-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-383"><a href="#cb96-383" aria-hidden="true" tabindex="-1"></a>  <span class="co">#subset sample by groups and phase2_fev1 scores</span></span>
-<span id="cb96-384"><a href="#cb96-384" aria-hidden="true" tabindex="-1"></a>  females       <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>gender <span class="sc">==</span> <span class="st">"Female"</span>, <span class="st">"fev1_phase2"</span>]</span>
-<span id="cb96-385"><a href="#cb96-385" aria-hidden="true" tabindex="-1"></a>  males         <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>gender <span class="sc">==</span> <span class="st">"Male"</span>, <span class="st">"fev1_phase2"</span>]</span>
-<span id="cb96-386"><a href="#cb96-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-387"><a href="#cb96-387" aria-hidden="true" tabindex="-1"></a>  curr_smokers  <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>smoking_status <span class="sc">==</span> <span class="st">"Current Smoker"</span>, <span class="st">"fev1_phase2"</span>]</span>
-<span id="cb96-388"><a href="#cb96-388" aria-hidden="true" tabindex="-1"></a>  form_smokers  <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>smoking_status <span class="sc">==</span> <span class="st">"Former Smoker"</span>, <span class="st">"fev1_phase2"</span>]</span>
-<span id="cb96-389"><a href="#cb96-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-390"><a href="#cb96-390" aria-hidden="true" tabindex="-1"></a>  hay_fever_yes <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>hay_fever <span class="sc">==</span> <span class="st">"Yes"</span>, <span class="st">"fev1_phase2"</span>]</span>
-<span id="cb96-391"><a href="#cb96-391" aria-hidden="true" tabindex="-1"></a>  hay_fever_no  <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>hay_fever <span class="sc">==</span> <span class="st">"No"</span>, <span class="st">"fev1_phase2"</span>]</span>
-<span id="cb96-392"><a href="#cb96-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-393"><a href="#cb96-393" aria-hidden="true" tabindex="-1"></a>  asthma_yes    <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>asthma <span class="sc">==</span> <span class="st">"Yes"</span>, <span class="st">"fev1_phase2"</span>]</span>
-<span id="cb96-394"><a href="#cb96-394" aria-hidden="true" tabindex="-1"></a>  asthma_no     <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>asthma <span class="sc">==</span> <span class="st">"No"</span>, <span class="st">"fev1_phase2"</span>]</span>
-<span id="cb96-395"><a href="#cb96-395" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-396"><a href="#cb96-396" aria-hidden="true" tabindex="-1"></a>  copd_yes      <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>copd <span class="sc">==</span> <span class="st">"Yes"</span>, <span class="st">"fev1_phase2"</span>]</span>
-<span id="cb96-397"><a href="#cb96-397" aria-hidden="true" tabindex="-1"></a>  copd_no       <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>copd <span class="sc">==</span> <span class="st">"No"</span>, <span class="st">"fev1_phase2"</span>]</span>
-<span id="cb96-398"><a href="#cb96-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-399"><a href="#cb96-399" aria-hidden="true" tabindex="-1"></a>  <span class="co">#calculate and store mean differences for each group</span></span>
-<span id="cb96-400"><a href="#cb96-400" aria-hidden="true" tabindex="-1"></a>  gender_diff <span class="ot">&lt;-</span> <span class="fu">mean</span>(females) <span class="sc">-</span> <span class="fu">mean</span>(males)</span>
-<span id="cb96-401"><a href="#cb96-401" aria-hidden="true" tabindex="-1"></a>    gender_diffs[i] <span class="ot">&lt;-</span> gender_diff</span>
-<span id="cb96-402"><a href="#cb96-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-403"><a href="#cb96-403" aria-hidden="true" tabindex="-1"></a>  smoking_status_diff <span class="ot">&lt;-</span> <span class="fu">mean</span>(curr_smokers) <span class="sc">-</span> <span class="fu">mean</span>(form_smokers)</span>
-<span id="cb96-404"><a href="#cb96-404" aria-hidden="true" tabindex="-1"></a>    smoking_diffs[i] <span class="ot">&lt;-</span> smoking_status_diff</span>
-<span id="cb96-405"><a href="#cb96-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-406"><a href="#cb96-406" aria-hidden="true" tabindex="-1"></a>  hay_fever_diff <span class="ot">&lt;-</span> <span class="fu">mean</span>(hay_fever_no) <span class="sc">-</span> <span class="fu">mean</span>(hay_fever_yes)</span>
-<span id="cb96-407"><a href="#cb96-407" aria-hidden="true" tabindex="-1"></a>    hayfev_diffs[i] <span class="ot">&lt;-</span>  hay_fever_diff</span>
-<span id="cb96-408"><a href="#cb96-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-409"><a href="#cb96-409" aria-hidden="true" tabindex="-1"></a>  asthma_diff <span class="ot">&lt;-</span> <span class="fu">mean</span>(asthma_no) <span class="sc">-</span> <span class="fu">mean</span>(asthma_yes)</span>
-<span id="cb96-410"><a href="#cb96-410" aria-hidden="true" tabindex="-1"></a>    asthma_diffs[i] <span class="ot">&lt;-</span>  asthma_diff</span>
-<span id="cb96-411"><a href="#cb96-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-412"><a href="#cb96-412" aria-hidden="true" tabindex="-1"></a>  copd_diff <span class="ot">&lt;-</span> <span class="fu">mean</span>(copd_no) <span class="sc">-</span> <span class="fu">mean</span>(copd_yes)</span>
-<span id="cb96-413"><a href="#cb96-413" aria-hidden="true" tabindex="-1"></a>    copd_diffs[i] <span class="ot">&lt;-</span> copd_diff</span>
-<span id="cb96-414"><a href="#cb96-414" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb96-415"><a href="#cb96-415" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-416"><a href="#cb96-416" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"95% Confidence Interval for Mean Difference in phase 2 FEV1 by Gender:"</span>)</span>
-<span id="cb96-417"><a href="#cb96-417" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">quantile</span>(gender_diffs, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>)))</span>
-<span id="cb96-418"><a href="#cb96-418" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-419"><a href="#cb96-419" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"95% Confidence Interval for Mean Difference in phase 2 FEV1 by Smoking Status:"</span>)</span>
-<span id="cb96-420"><a href="#cb96-420" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">quantile</span>(smoking_diffs, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>)))</span>
-<span id="cb96-421"><a href="#cb96-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-422"><a href="#cb96-422" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"95% Confidence Interval for Mean Difference in phase 2 FEV1 by Hay Fever:"</span>)</span>
-<span id="cb96-423"><a href="#cb96-423" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">quantile</span>(hayfev_diffs, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>)))</span>
-<span id="cb96-424"><a href="#cb96-424" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-425"><a href="#cb96-425" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"95% Confidence Interval for Mean Difference in phase 2 FEV1 by Asthma:"</span>)</span>
-<span id="cb96-426"><a href="#cb96-426" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">quantile</span>(asthma_diffs, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>)))</span>
-<span id="cb96-427"><a href="#cb96-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-428"><a href="#cb96-428" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"95% Confidence Interval for Mean Difference in phase 2 FEV1 by COPD:"</span>)</span>
-<span id="cb96-429"><a href="#cb96-429" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">quantile</span>(copd_diffs, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>)))</span>
-<span id="cb96-430"><a href="#cb96-430" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb96-431"><a href="#cb96-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-432"><a href="#cb96-432" aria-hidden="true" tabindex="-1"></a>Based on the bootstrapped confidence intervals I created, I can conclude that:</span>
-<span id="cb96-433"><a href="#cb96-433" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-434"><a href="#cb96-434" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>females have significantly lower phase 2 FEV1 scores than males</span>
-<span id="cb96-435"><a href="#cb96-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-436"><a href="#cb96-436" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>current smokers have significantly greater phase 2 fev1 scores than former smokers</span>
-<span id="cb96-437"><a href="#cb96-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-438"><a href="#cb96-438" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>there is no significant difference in phase 2 FEV1 scores for patients with hay fever and patients who do not have hay fever (0 is contained within the interval)</span>
-<span id="cb96-439"><a href="#cb96-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-440"><a href="#cb96-440" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>patients without asthma have significantly greater phase 2 fev1 scores than patients with asthma</span>
-<span id="cb96-441"><a href="#cb96-441" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-442"><a href="#cb96-442" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>patients without COPD have signifcantly greater phase 2 fev1 scores than patients with asthma</span>
-<span id="cb96-443"><a href="#cb96-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-444"><a href="#cb96-444" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Numeric Variables</span></span>
-<span id="cb96-445"><a href="#cb96-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-446"><a href="#cb96-446" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Fit 5 simple linear regressions using the five numeric variables previously visualized</span>
-<span id="cb96-447"><a href="#cb96-447" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-448"><a href="#cb96-448" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Conduct a statistical test to determine if the five slopes from regressions are significantly different from 0</span>
-<span id="cb96-449"><a href="#cb96-449" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-450"><a href="#cb96-450" aria-hidden="true" tabindex="-1"></a><span class="in">```{r bootstrap confidence intervals on regression coefficients}</span></span>
-<span id="cb96-451"><a href="#cb96-451" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. fit linear regressions</span></span>
-<span id="cb96-452"><a href="#cb96-452" aria-hidden="true" tabindex="-1"></a>fit_lung_insp <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> lung_volume_inspiratory, <span class="at">data =</span> COPD_data_clean)</span>
-<span id="cb96-453"><a href="#cb96-453" aria-hidden="true" tabindex="-1"></a>fit_lung_exp_log <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> lung_volume_expiratory_log, <span class="at">data =</span> COPD_data_clean)</span>
-<span id="cb96-454"><a href="#cb96-454" aria-hidden="true" tabindex="-1"></a>fit_smoking <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> duration_smoking, <span class="at">data =</span> COPD_data_clean)</span>
-<span id="cb96-455"><a href="#cb96-455" aria-hidden="true" tabindex="-1"></a>fit_cigs <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> cigs_per_day_avg_log, <span class="at">data =</span> COPD_data_clean)</span>
-<span id="cb96-456"><a href="#cb96-456" aria-hidden="true" tabindex="-1"></a>fit_FVC <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> fvc, <span class="at">data =</span> COPD_data_clean)</span>
-<span id="cb96-457"><a href="#cb96-457" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-458"><a href="#cb96-458" aria-hidden="true" tabindex="-1"></a><span class="co"># print original fitted linear models</span></span>
-<span id="cb96-459"><a href="#cb96-459" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"phase2_fev1 ="</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_lung_insp)[<span class="dv">1</span>], <span class="dv">3</span>), <span class="st">"+"</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_lung_insp)[<span class="dv">2</span>], <span class="dv">3</span>), <span class="st">"(lung_volume_inspiratory)"</span>))</span>
-<span id="cb96-460"><a href="#cb96-460" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"phase2_fev1 ="</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_lung_exp_log)[<span class="dv">1</span>], <span class="dv">3</span>), <span class="st">"+"</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_lung_exp_log)[<span class="dv">2</span>], <span class="dv">3</span>), <span class="st">"(lung_volume_expiratory_log)"</span>))</span>
-<span id="cb96-461"><a href="#cb96-461" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"phase2_fev1 ="</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_smoking)[<span class="dv">1</span>], <span class="dv">3</span>), <span class="st">"+"</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_smoking)[<span class="dv">2</span>], <span class="dv">3</span>), <span class="st">"(duration_smoking)"</span>))</span>
-<span id="cb96-462"><a href="#cb96-462" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"phase2_fev1 ="</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_cigs)[<span class="dv">1</span>], <span class="dv">3</span>), <span class="st">"+"</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_cigs)[<span class="dv">2</span>], <span class="dv">3</span>), <span class="st">"(cigs_per_day_avg_log)"</span>))</span>
-<span id="cb96-463"><a href="#cb96-463" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"phase2_fev1 ="</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_FVC)[<span class="dv">1</span>], <span class="dv">3</span>), <span class="st">"+"</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_FVC)[<span class="dv">2</span>], <span class="dv">3</span>), <span class="st">"(fvc)"</span>))</span>
-<span id="cb96-464"><a href="#cb96-464" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"----"</span>)</span>
-<span id="cb96-465"><a href="#cb96-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-466"><a href="#cb96-466" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.</span></span>
-<span id="cb96-467"><a href="#cb96-467" aria-hidden="true" tabindex="-1"></a><span class="co"># To determine if the slopes from the linear models above are different from zero, I will use bootstrapping to create confidence intervals</span></span>
-<span id="cb96-468"><a href="#cb96-468" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">2000</span> <span class="co"># number of bootstrapped samples</span></span>
-<span id="cb96-469"><a href="#cb96-469" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(COPD_data_clean<span class="sc">$</span>fev1_phase2) <span class="co">#sample szie</span></span>
-<span id="cb96-470"><a href="#cb96-470" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-471"><a href="#cb96-471" aria-hidden="true" tabindex="-1"></a><span class="co">#vectors to store slopes</span></span>
-<span id="cb96-472"><a href="#cb96-472" aria-hidden="true" tabindex="-1"></a>lung_in_slopes  <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
-<span id="cb96-473"><a href="#cb96-473" aria-hidden="true" tabindex="-1"></a>lung_exp_slopes <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
-<span id="cb96-474"><a href="#cb96-474" aria-hidden="true" tabindex="-1"></a>smoking_slopes  <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
-<span id="cb96-475"><a href="#cb96-475" aria-hidden="true" tabindex="-1"></a>cigs_slopes     <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
-<span id="cb96-476"><a href="#cb96-476" aria-hidden="true" tabindex="-1"></a>fvc_slopes      <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
-<span id="cb96-477"><a href="#cb96-477" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-478"><a href="#cb96-478" aria-hidden="true" tabindex="-1"></a><span class="co">#loop</span></span>
-<span id="cb96-479"><a href="#cb96-479" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>B){</span>
-<span id="cb96-480"><a href="#cb96-480" aria-hidden="true" tabindex="-1"></a>  <span class="co">#create random sample with replacement</span></span>
-<span id="cb96-481"><a href="#cb96-481" aria-hidden="true" tabindex="-1"></a>  boot_indexes <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(COPD_data_clean), <span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb96-482"><a href="#cb96-482" aria-hidden="true" tabindex="-1"></a>  boot_sample <span class="ot">&lt;-</span> COPD_data_clean[boot_indexes, ]</span>
-<span id="cb96-483"><a href="#cb96-483" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-484"><a href="#cb96-484" aria-hidden="true" tabindex="-1"></a>  <span class="co">#fit linear models</span></span>
-<span id="cb96-485"><a href="#cb96-485" aria-hidden="true" tabindex="-1"></a>  boot_fit_lung_insp <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> lung_volume_inspiratory, <span class="at">data =</span> boot_sample)</span>
-<span id="cb96-486"><a href="#cb96-486" aria-hidden="true" tabindex="-1"></a>  boot_fit_lung_exp_log <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> lung_volume_expiratory_log, <span class="at">data =</span> boot_sample)</span>
-<span id="cb96-487"><a href="#cb96-487" aria-hidden="true" tabindex="-1"></a>  boot_fit_smoking <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> duration_smoking, <span class="at">data =</span> boot_sample)</span>
-<span id="cb96-488"><a href="#cb96-488" aria-hidden="true" tabindex="-1"></a>  boot_fit_cigs <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> cigs_per_day_avg_log, <span class="at">data =</span> boot_sample)</span>
-<span id="cb96-489"><a href="#cb96-489" aria-hidden="true" tabindex="-1"></a>  boot_fit_FVC <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> fvc, <span class="at">data =</span> boot_sample)</span>
-<span id="cb96-490"><a href="#cb96-490" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-491"><a href="#cb96-491" aria-hidden="true" tabindex="-1"></a>  <span class="co">#store slopes</span></span>
-<span id="cb96-492"><a href="#cb96-492" aria-hidden="true" tabindex="-1"></a>    lung_in_slopes[i] <span class="ot">&lt;-</span> <span class="fu">coef</span>(boot_fit_lung_insp)[<span class="dv">2</span>]</span>
-<span id="cb96-493"><a href="#cb96-493" aria-hidden="true" tabindex="-1"></a>    lung_exp_slopes[i] <span class="ot">&lt;-</span> <span class="fu">coef</span>(boot_fit_lung_exp_log)[<span class="dv">2</span>]</span>
-<span id="cb96-494"><a href="#cb96-494" aria-hidden="true" tabindex="-1"></a>    smoking_slopes[i] <span class="ot">&lt;-</span>  <span class="fu">coef</span>(boot_fit_smoking)[<span class="dv">2</span>]</span>
-<span id="cb96-495"><a href="#cb96-495" aria-hidden="true" tabindex="-1"></a>    cigs_slopes[i]     <span class="ot">&lt;-</span>  <span class="fu">coef</span>(boot_fit_cigs)[<span class="dv">2</span>]</span>
-<span id="cb96-496"><a href="#cb96-496" aria-hidden="true" tabindex="-1"></a>    fvc_slopes [i]     <span class="ot">&lt;-</span>  <span class="fu">coef</span>(boot_fit_FVC)[<span class="dv">2</span>]</span>
-<span id="cb96-497"><a href="#cb96-497" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb96-498"><a href="#cb96-498" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb96-499"><a href="#cb96-499" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-500"><a href="#cb96-500" aria-hidden="true" tabindex="-1"></a>Based on my linear regression models, and the bootstrapped 95% confidence intervals for the slopes of the regression models, I can conclude that,</span>
-<span id="cb96-501"><a href="#cb96-501" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-502"><a href="#cb96-502" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>lung volume inspiratory and phase 2 FEV1 are significantly correlated (the slope is significantly greater than 0) because 0 is not contained in the confidence interval</span>
-<span id="cb96-503"><a href="#cb96-503" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-504"><a href="#cb96-504" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>lung volume expiratory (log transformed) and phase 2 FEV1 are significantly correlated (slope is significantly less than 0) because 0 is not contained within the interval</span>
-<span id="cb96-505"><a href="#cb96-505" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-506"><a href="#cb96-506" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>duration smoking and phase 2 fev1 score are significantly correlated (slope is significantly less than 0) because 0 is not contained within the interval</span>
-<span id="cb96-507"><a href="#cb96-507" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-508"><a href="#cb96-508" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>average number of cigarettes per day (log transformed) and phase 2 fev1 score are significantly correlated (slope is significantly less than 0) because 0 is not contained within the interval</span>
-<span id="cb96-509"><a href="#cb96-509" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-510"><a href="#cb96-510" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>FVC and phase 2 fev1 score are significantly correlated (slope is significantly greater than 0) because 0 is not contained within the interval</span>
-<span id="cb96-511"><a href="#cb96-511" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-512"><a href="#cb96-512" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
-<span id="cb96-513"><a href="#cb96-513" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-514"><a href="#cb96-514" aria-hidden="true" tabindex="-1"></a>Affecting over 16 million Americans, chronic obstructive pulmonary disease (COPD) is commonly caused by cigarette smoking, asthma, and toxin inhalation. There is no cure for COPD; however, patients receive care to manage symptoms and slow the progression of the disease. One way to measure the severity of COPD is through spirometry. One spirometry measure is the forced expiratory volume (FEV1), which measures the volume of air forcefully exhaled in 1 second. The aim of this study was to compare patients' FEV1 scores at the five year follow up (denoted as "phase 2"), to other variables from the patient data.</span>
-<span id="cb96-515"><a href="#cb96-515" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-166"><a href="#cb96-166" aria-hidden="true" tabindex="-1"></a><span class="co"># test function on numeric variable</span></span>
+<span id="cb96-167"><a href="#cb96-167" aria-hidden="true" tabindex="-1"></a><span class="fu">stats</span>(COPD_data_clean<span class="sc">$</span>bmi)</span>
+<span id="cb96-168"><a href="#cb96-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb96-169"><a href="#cb96-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-170"><a href="#cb96-170" aria-hidden="true" tabindex="-1"></a>**Apply the function to all columns**</span>
+<span id="cb96-171"><a href="#cb96-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-172"><a href="#cb96-172" aria-hidden="true" tabindex="-1"></a><span class="in">```{r apply function to all columns}</span></span>
+<span id="cb96-173"><a href="#cb96-173" aria-hidden="true" tabindex="-1"></a><span class="co"># apply function across columns except id column</span></span>
+<span id="cb96-174"><a href="#cb96-174" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(<span class="at">X =</span> COPD_data_clean[, <span class="fu">names</span>(COPD_data_clean) <span class="sc">!=</span> <span class="st">"sid"</span>], </span>
+<span id="cb96-175"><a href="#cb96-175" aria-hidden="true" tabindex="-1"></a>       <span class="at">FUN =</span> stats)</span>
+<span id="cb96-176"><a href="#cb96-176" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb96-177"><a href="#cb96-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-178"><a href="#cb96-178" aria-hidden="true" tabindex="-1"></a>I noticed that the following variables all report NA, so missing values need to be excluded for these variables:</span>
+<span id="cb96-179"><a href="#cb96-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-180"><a href="#cb96-180" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>lung_volume_inspiartory</span>
+<span id="cb96-181"><a href="#cb96-181" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>emphysema_percentage</span>
+<span id="cb96-182"><a href="#cb96-182" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>lung_volume_expiratory</span>
+<span id="cb96-183"><a href="#cb96-183" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>gas_trapping_percentage</span>
+<span id="cb96-184"><a href="#cb96-184" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>mean_density_inspiratory</span>
+<span id="cb96-185"><a href="#cb96-185" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>mean_density_expiratory</span>
+<span id="cb96-186"><a href="#cb96-186" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>fev1_fvc_ratio</span>
+<span id="cb96-187"><a href="#cb96-187" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>fev1</span>
+<span id="cb96-188"><a href="#cb96-188" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>fvc</span>
+<span id="cb96-189"><a href="#cb96-189" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>fev1_phase2</span>
+<span id="cb96-190"><a href="#cb96-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-191"><a href="#cb96-191" aria-hidden="true" tabindex="-1"></a>**Remove missing values and rerun descriptive statistics**</span>
+<span id="cb96-192"><a href="#cb96-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-193"><a href="#cb96-193" aria-hidden="true" tabindex="-1"></a><span class="in">```{r remove missing values}</span></span>
+<span id="cb96-194"><a href="#cb96-194" aria-hidden="true" tabindex="-1"></a><span class="co">#remove rows with missing values, complete.cases returns true for each row that contains values in all columns</span></span>
+<span id="cb96-195"><a href="#cb96-195" aria-hidden="true" tabindex="-1"></a>COPD_data_clean <span class="ot">&lt;-</span> COPD_data_clean[ <span class="fu">complete.cases</span>(COPD_data_clean) , ]</span>
+<span id="cb96-196"><a href="#cb96-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-197"><a href="#cb96-197" aria-hidden="true" tabindex="-1"></a><span class="co">#check stats now return values instead of NA</span></span>
+<span id="cb96-198"><a href="#cb96-198" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(COPD_data_clean[ , <span class="fu">names</span>(COPD_data_clean) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"lung_volume_inspiratory"</span>, <span class="st">"emphysema_percentage"</span>,</span>
+<span id="cb96-199"><a href="#cb96-199" aria-hidden="true" tabindex="-1"></a>  <span class="st">"lung_volume_expiratory"</span>, <span class="st">"gas_trapping_percentage"</span>, <span class="st">"mean_density_inspiratory"</span>, <span class="st">"mean_density_expiratory"</span>,</span>
+<span id="cb96-200"><a href="#cb96-200" aria-hidden="true" tabindex="-1"></a>  <span class="st">"fev1_fvc_ratio"</span>, <span class="st">"fev1"</span>, <span class="st">"fvc"</span>, <span class="st">"fev1_phase2"</span> ) ], stats)</span>
+<span id="cb96-201"><a href="#cb96-201" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb96-202"><a href="#cb96-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-203"><a href="#cb96-203" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Visualizing numeric variables with histograms</span></span>
+<span id="cb96-204"><a href="#cb96-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-205"><a href="#cb96-205" aria-hidden="true" tabindex="-1"></a><span class="in">```{r histograms for numeric variables}</span></span>
+<span id="cb96-206"><a href="#cb96-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-207"><a href="#cb96-207" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (col <span class="cf">in</span> <span class="fu">names</span>(COPD_data_clean)) {</span>
+<span id="cb96-208"><a href="#cb96-208" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span>(<span class="fu">is.numeric</span>(COPD_data_clean[,col]) <span class="sc">|</span> <span class="fu">is.integer</span>(COPD_data_clean[,col])){</span>
+<span id="cb96-209"><a href="#cb96-209" aria-hidden="true" tabindex="-1"></a>   plot <span class="ot">&lt;-</span>  <span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> .data[[col]])) <span class="sc">+</span></span>
+<span id="cb96-210"><a href="#cb96-210" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb96-211"><a href="#cb96-211" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste</span>(<span class="st">"Frequency of"</span>, col)) <span class="sc">+</span> </span>
+<span id="cb96-212"><a href="#cb96-212" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme_light</span>()</span>
+<span id="cb96-213"><a href="#cb96-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-214"><a href="#cb96-214" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(plot)</span>
+<span id="cb96-215"><a href="#cb96-215" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb96-216"><a href="#cb96-216" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb96-217"><a href="#cb96-217" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb96-218"><a href="#cb96-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-219"><a href="#cb96-219" aria-hidden="true" tabindex="-1"></a>The following variables are highly skewed:</span>
+<span id="cb96-220"><a href="#cb96-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-221"><a href="#cb96-221" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>fev1_fvc_ratio (left-skewed)</span>
+<span id="cb96-222"><a href="#cb96-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-223"><a href="#cb96-223" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>gas_trapping_percentage (right-skewed)</span>
+<span id="cb96-224"><a href="#cb96-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-225"><a href="#cb96-225" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>lung_volume_expiratory (right-skewed)</span>
+<span id="cb96-226"><a href="#cb96-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-227"><a href="#cb96-227" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>emphysema_percentage (right-skewed)</span>
+<span id="cb96-228"><a href="#cb96-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-229"><a href="#cb96-229" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>cigs_per_day_avg (right-skewed)</span>
+<span id="cb96-230"><a href="#cb96-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-231"><a href="#cb96-231" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>hours_on_oxygen (right-skewed)</span>
+<span id="cb96-232"><a href="#cb96-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-233"><a href="#cb96-233" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>smoke_start_age (right-skewed)</span>
+<span id="cb96-234"><a href="#cb96-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-235"><a href="#cb96-235" aria-hidden="true" tabindex="-1"></a>I decided the best transformation for each variable by plotting histograms of the transformed variables to see which transformation created the most normal shaped (least skewed) distribution.</span>
+<span id="cb96-236"><a href="#cb96-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-237"><a href="#cb96-237" aria-hidden="true" tabindex="-1"></a>**Transform Variables and Recreate Histograms**</span>
+<span id="cb96-238"><a href="#cb96-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-239"><a href="#cb96-239" aria-hidden="true" tabindex="-1"></a><span class="in">```{r transform skewed variables}</span></span>
+<span id="cb96-240"><a href="#cb96-240" aria-hidden="true" tabindex="-1"></a><span class="co">#transform skewed variables</span></span>
+<span id="cb96-241"><a href="#cb96-241" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>fev1_fvc_ratio_squared <span class="ot">&lt;-</span> (COPD_data_clean<span class="sc">$</span>fev1_fvc_ratio)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb96-242"><a href="#cb96-242" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>gas_trapping_percentage_sqrt <span class="ot">&lt;-</span>  <span class="fu">sqrt</span>(COPD_data_clean<span class="sc">$</span>gas_trapping_percentage)</span>
+<span id="cb96-243"><a href="#cb96-243" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>lung_volume_expiratory_log <span class="ot">&lt;-</span> <span class="fu">log</span>(COPD_data_clean<span class="sc">$</span>lung_volume_expiratory)</span>
+<span id="cb96-244"><a href="#cb96-244" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>emphysema_percentage_log <span class="ot">&lt;-</span> <span class="fu">log</span>(COPD_data_clean<span class="sc">$</span>emphysema_percentage)</span>
+<span id="cb96-245"><a href="#cb96-245" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>cigs_per_day_avg_log <span class="ot">&lt;-</span> <span class="fu">log</span>(COPD_data_clean<span class="sc">$</span>cigs_per_day_avg)</span>
+<span id="cb96-246"><a href="#cb96-246" aria-hidden="true" tabindex="-1"></a>COPD_data_clean<span class="sc">$</span>smoke_start_age_log <span class="ot">&lt;-</span> <span class="fu">log</span>(COPD_data_clean<span class="sc">$</span>smoke_start_age)</span>
+<span id="cb96-247"><a href="#cb96-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-248"><a href="#cb96-248" aria-hidden="true" tabindex="-1"></a>transformed_vars <span class="ot">&lt;-</span> COPD_data_clean[, <span class="fu">names</span>(COPD_data_clean) <span class="sc">%in%</span></span>
+<span id="cb96-249"><a href="#cb96-249" aria-hidden="true" tabindex="-1"></a>                                      <span class="fu">c</span>(<span class="st">"fev1_fvc_ratio_squared"</span>,</span>
+<span id="cb96-250"><a href="#cb96-250" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"gas_trapping_percentage_sqrt"</span>,</span>
+<span id="cb96-251"><a href="#cb96-251" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"lung_volume_expiratory_log"</span>,</span>
+<span id="cb96-252"><a href="#cb96-252" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"emphysema_percentage_log"</span>,</span>
+<span id="cb96-253"><a href="#cb96-253" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"cigs_per_day_avg_log"</span>,</span>
+<span id="cb96-254"><a href="#cb96-254" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"smoke_start_age_log"</span>)]</span>
+<span id="cb96-255"><a href="#cb96-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-256"><a href="#cb96-256" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (col <span class="cf">in</span> <span class="fu">names</span>(transformed_vars)) {</span>
+<span id="cb96-257"><a href="#cb96-257" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span>(<span class="fu">is.numeric</span>(COPD_data_clean[,col]) <span class="sc">|</span> <span class="fu">is.integer</span>(COPD_data_clean[,col])){</span>
+<span id="cb96-258"><a href="#cb96-258" aria-hidden="true" tabindex="-1"></a>   plot <span class="ot">&lt;-</span>  <span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> .data[[col]])) <span class="sc">+</span></span>
+<span id="cb96-259"><a href="#cb96-259" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">fill =</span> <span class="st">"darkgreen"</span>) <span class="sc">+</span></span>
+<span id="cb96-260"><a href="#cb96-260" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste</span>(<span class="st">"Frequency of"</span>, col)) <span class="sc">+</span> </span>
+<span id="cb96-261"><a href="#cb96-261" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme_light</span>()</span>
+<span id="cb96-262"><a href="#cb96-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-263"><a href="#cb96-263" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(plot)</span>
+<span id="cb96-264"><a href="#cb96-264" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb96-265"><a href="#cb96-265" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb96-266"><a href="#cb96-266" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb96-267"><a href="#cb96-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-268"><a href="#cb96-268" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Visualize Categorical Variables by Phase 2 FEV1 Scores</span></span>
+<span id="cb96-269"><a href="#cb96-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-270"><a href="#cb96-270" aria-hidden="true" tabindex="-1"></a><span class="in">```{r visualize categorical vars by phase 2 FEV1}</span></span>
+<span id="cb96-271"><a href="#cb96-271" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizing Phase 2 FEV1 scores by categorical variables</span></span>
+<span id="cb96-272"><a href="#cb96-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-273"><a href="#cb96-273" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> gender, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
+<span id="cb96-274"><a href="#cb96-274" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb96-275"><a href="#cb96-275" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 vs. Gender"</span>, <span class="at">x =</span> <span class="st">"Gender"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
+<span id="cb96-276"><a href="#cb96-276" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
+<span id="cb96-277"><a href="#cb96-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-278"><a href="#cb96-278" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> smoking_status, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
+<span id="cb96-279"><a href="#cb96-279" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb96-280"><a href="#cb96-280" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 vs. Smoking Status"</span>, <span class="at">x =</span> <span class="st">"Smoking Status"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
+<span id="cb96-281"><a href="#cb96-281" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
+<span id="cb96-282"><a href="#cb96-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-283"><a href="#cb96-283" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> hay_fever, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
+<span id="cb96-284"><a href="#cb96-284" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb96-285"><a href="#cb96-285" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 vs. Hay Fever"</span>, <span class="at">x =</span> <span class="st">"Hay Fever"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
+<span id="cb96-286"><a href="#cb96-286" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
+<span id="cb96-287"><a href="#cb96-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-288"><a href="#cb96-288" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> asthma, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
+<span id="cb96-289"><a href="#cb96-289" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb96-290"><a href="#cb96-290" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 vs. Asthma"</span>, <span class="at">x =</span> <span class="st">"Asthma"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
+<span id="cb96-291"><a href="#cb96-291" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
+<span id="cb96-292"><a href="#cb96-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-293"><a href="#cb96-293" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> copd, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
+<span id="cb96-294"><a href="#cb96-294" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb96-295"><a href="#cb96-295" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Score vs. COPD"</span>, <span class="at">x =</span> <span class="st">"COPD"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1 Score"</span>) <span class="sc">+</span> </span>
+<span id="cb96-296"><a href="#cb96-296" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
+<span id="cb96-297"><a href="#cb96-297" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb96-298"><a href="#cb96-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-299"><a href="#cb96-299" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Gender** There does appear to be a difference in phase 2 FEV1 score in females versus males. For females, the median phase2_fev1 is just under 2, with maximum scores up to about 3.5. For males, the median phase2_fev1 score is higher, just above 2.5, with maximum scores up to about 5. Male phase2_fev1 scores have higher variability than that for females. Neither group has outliers, and both groups have symmetrical distributions.</span>
+<span id="cb96-300"><a href="#cb96-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-301"><a href="#cb96-301" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Smoking Status** There does not appear to be a difference in phase 2 FEV1 scores between former smokers and current smokers. Both groups have median phase2_fev1 of about 2.2, with some high outliers around 4.5 and 5. The current smoker group has slightly smaller range and variability. There is no data for nonsmokers in the dataset, so there is no way to know if there is a difference in FEV1 scores for nonsmokers.</span>
+<span id="cb96-302"><a href="#cb96-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-303"><a href="#cb96-303" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Hay Fever** There does not appear to be any difference in phase 2 FEV1 scores for patients with or without hay fever. Patients with hay fever ("Yes" group) and patients without hay fever("No" group) have a median phase 2 FEV1 score of about 2.2. Both groups have very similar variability, with range of about 4.6. Both groups have a few high outliers above 4.5. and otherwise symmetrical distributions.</span>
+<span id="cb96-304"><a href="#cb96-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-305"><a href="#cb96-305" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Asthma** There appears to be a difference in phase 2 FEV1 scores between patients with and without asthma. The group of patients without asthma ("No" group) has a higher median phase 2 FEV1 score around 2.2, a symmetrical distribution with roughly 7 high outliers above 4.5. The group of patients with asthma ("Yes" group) has a lower median phase 2 FEV1 score of about 1.75, a smaller range, and more symmetrical distribution than the "No" group, with only 1 outlier at about 4.8.</span>
+<span id="cb96-306"><a href="#cb96-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-307"><a href="#cb96-307" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. COPD** There appears to be a difference in phase 2 FEV1 scores between patients with and without COPD. The group of patients without COPD, ("No" group) has a median phase 2 FEV1 score of about 2.4, a range of 4.5, and roughly symmetrical distribution other than the high outliers around scores 0f 4.5 to 5. The group of patients with COPD ("Yes" group) has a lower median phase 2 FEV1 score of about 1.4, a smaller range of about 4, and a slightly more right-skewed distribution.</span>
+<span id="cb96-308"><a href="#cb96-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-309"><a href="#cb96-309" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Visualize Numeric Variables by Phase 2 FEV1 Scores</span></span>
+<span id="cb96-310"><a href="#cb96-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-313"><a href="#cb96-313" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb96-314"><a href="#cb96-314" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot fev1_phase2 vs. lung volume inspiratory</span></span>
+<span id="cb96-315"><a href="#cb96-315" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> lung_volume_inspiratory , <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
+<span id="cb96-316"><a href="#cb96-316" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb96-317"><a href="#cb96-317" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Scores vs. Lung Volume Inspiratory"</span>, <span class="at">x =</span><span class="st">"Lung Volume Inspiratory (Liters)"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
+<span id="cb96-318"><a href="#cb96-318" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
+<span id="cb96-319"><a href="#cb96-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-320"><a href="#cb96-320" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot fev1_phase2 vs. lung volume expiratory</span></span>
+<span id="cb96-321"><a href="#cb96-321" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> lung_volume_expiratory_log, <span class="at">y =</span> fev1_phase2))<span class="sc">+</span></span>
+<span id="cb96-322"><a href="#cb96-322" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb96-323"><a href="#cb96-323" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Scores vs. Lung Volume Expiratory (log transformed)"</span>, <span class="at">x =</span> <span class="st">"Log of Lung Volume Expiratory (Liters)"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
+<span id="cb96-324"><a href="#cb96-324" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
+<span id="cb96-325"><a href="#cb96-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-326"><a href="#cb96-326" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot fev1_phase2 vs. duration smoking</span></span>
+<span id="cb96-327"><a href="#cb96-327" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> duration_smoking, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
+<span id="cb96-328"><a href="#cb96-328" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb96-329"><a href="#cb96-329" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Scores vs. Duration Smoking"</span>, <span class="at">x =</span> <span class="st">"Duration Smoking (Years)"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
+<span id="cb96-330"><a href="#cb96-330" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
+<span id="cb96-331"><a href="#cb96-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-332"><a href="#cb96-332" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot fev1_phase2 vs. average number of cigarettes per day</span></span>
+<span id="cb96-333"><a href="#cb96-333" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> cigs_per_day_avg_log, <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
+<span id="cb96-334"><a href="#cb96-334" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb96-335"><a href="#cb96-335" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Scores vs. Avg Cigs per Day (log transformed)"</span>, <span class="at">x =</span> <span class="st">"Log Avg Cigs per Day"</span>, <span class="at">y =</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
+<span id="cb96-336"><a href="#cb96-336" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
+<span id="cb96-337"><a href="#cb96-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-338"><a href="#cb96-338" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Plot fev1_phase2 vs. Forced Vital Capacity (FVC)</span></span>
+<span id="cb96-339"><a href="#cb96-339" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> COPD_data_clean, <span class="fu">aes</span>(<span class="at">x =</span> fvc , <span class="at">y =</span> fev1_phase2)) <span class="sc">+</span></span>
+<span id="cb96-340"><a href="#cb96-340" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb96-341"><a href="#cb96-341" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Phase 2 FEV1 Scores vs. FVC"</span>, <span class="at">x =</span> <span class="st">"FVC"</span>, <span class="at">y=</span> <span class="st">"Phase 2 FEV1"</span>) <span class="sc">+</span> </span>
+<span id="cb96-342"><a href="#cb96-342" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span>
+<span id="cb96-343"><a href="#cb96-343" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb96-344"><a href="#cb96-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-345"><a href="#cb96-345" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Lung Volume Inspiratory** There appears to be a moderate positive linear relationship between lung volume inspiratory and phase 2 FEV1 scores. The most concentrated section of data points is around lung volume inspiratory between 4 and 6 liters and phase 2 FEV1 scores between 1.5 and 3.</span>
+<span id="cb96-346"><a href="#cb96-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-347"><a href="#cb96-347" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Log of Lung Volume Expiratory** There does not appear to be much of a relationship between lung volume expiratory and Phase 2 FEV1 scores, possibly a weak negative linear relationship, or a weak nonlinear relationship. The data is clustered around log transformed lung volume expiratory of 1, and phase 2 FEV1 score between 2 and 3.\</span>
+<span id="cb96-348"><a href="#cb96-348" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb96-349"><a href="#cb96-349" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Duration Smoking**\</span>
+<span id="cb96-350"><a href="#cb96-350" aria-hidden="true" tabindex="-1"></a>There appears to be a weak negative linear relationship between duration smoking in years and Phase 2 FEV1 scores. The data is centered around 30-50 years of smoking and phase 2 FEV1 scores between 1.5 and 3.\</span>
+<span id="cb96-351"><a href="#cb96-351" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb96-352"><a href="#cb96-352" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. Log of Avg Cigs per Day**\</span>
+<span id="cb96-353"><a href="#cb96-353" aria-hidden="true" tabindex="-1"></a>There does not appear to be any relationship between the average number of cigarettes smoked per day and phase 2 FEV1 scores. There is slightly less variability in phase 2 FEV1 scores for log average cigs per day below 2 and above 4.\</span>
+<span id="cb96-354"><a href="#cb96-354" aria-hidden="true" tabindex="-1"></a>\</span>
+<span id="cb96-355"><a href="#cb96-355" aria-hidden="true" tabindex="-1"></a>**Phase 2 FEV1 vs. FVC**\</span>
+<span id="cb96-356"><a href="#cb96-356" aria-hidden="true" tabindex="-1"></a>There appears to be a strong positive linear relationship between FVC and Phase 2 FEV1 scores. The data is most concentrated between FVC of 2 and 4 and phase 2 FEV1 scores between 1.5 and 3.</span>
+<span id="cb96-357"><a href="#cb96-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-358"><a href="#cb96-358" aria-hidden="true" tabindex="-1"></a><span class="fu">## Inference and Modeling</span></span>
+<span id="cb96-359"><a href="#cb96-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-360"><a href="#cb96-360" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Categorical Variables</span></span>
+<span id="cb96-361"><a href="#cb96-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-362"><a href="#cb96-362" aria-hidden="true" tabindex="-1"></a>Conduct a statistical test to determine if there is a significant difference in <span class="in">`fev1_phase2`</span> between groups from categorical variables previously visualized.</span>
+<span id="cb96-363"><a href="#cb96-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-364"><a href="#cb96-364" aria-hidden="true" tabindex="-1"></a><span class="in">```{r bootstrap confidence intervals as statistical test}</span></span>
+<span id="cb96-365"><a href="#cb96-365" aria-hidden="true" tabindex="-1"></a><span class="co"># To determine if there is significant difference in fev1_phase2 scores between groups, I will use bootstrapping to create confidence intervals</span></span>
+<span id="cb96-366"><a href="#cb96-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-367"><a href="#cb96-367" aria-hidden="true" tabindex="-1"></a><span class="co">#B = number of bootstrapped samples, n = sample size</span></span>
+<span id="cb96-368"><a href="#cb96-368" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb96-369"><a href="#cb96-369" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(COPD_data_clean<span class="sc">$</span>fev1_phase2)</span>
+<span id="cb96-370"><a href="#cb96-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-371"><a href="#cb96-371" aria-hidden="true" tabindex="-1"></a><span class="co">#vectors to store mean differences</span></span>
+<span id="cb96-372"><a href="#cb96-372" aria-hidden="true" tabindex="-1"></a>gender_diffs  <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
+<span id="cb96-373"><a href="#cb96-373" aria-hidden="true" tabindex="-1"></a>smoking_diffs <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
+<span id="cb96-374"><a href="#cb96-374" aria-hidden="true" tabindex="-1"></a>hayfev_diffs  <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
+<span id="cb96-375"><a href="#cb96-375" aria-hidden="true" tabindex="-1"></a>asthma_diffs  <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
+<span id="cb96-376"><a href="#cb96-376" aria-hidden="true" tabindex="-1"></a>copd_diffs    <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
+<span id="cb96-377"><a href="#cb96-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-378"><a href="#cb96-378" aria-hidden="true" tabindex="-1"></a><span class="co"># create B = 1000 samples</span></span>
+<span id="cb96-379"><a href="#cb96-379" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>B) {</span>
+<span id="cb96-380"><a href="#cb96-380" aria-hidden="true" tabindex="-1"></a>  <span class="co"># create random sample of dataset with replacement</span></span>
+<span id="cb96-381"><a href="#cb96-381" aria-hidden="true" tabindex="-1"></a>  boot_indexes <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>n, <span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb96-382"><a href="#cb96-382" aria-hidden="true" tabindex="-1"></a>  boot_sample <span class="ot">&lt;-</span> COPD_data_clean[boot_indexes, ]</span>
+<span id="cb96-383"><a href="#cb96-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-384"><a href="#cb96-384" aria-hidden="true" tabindex="-1"></a>  <span class="co">#subset sample by groups and phase2_fev1 scores</span></span>
+<span id="cb96-385"><a href="#cb96-385" aria-hidden="true" tabindex="-1"></a>  females       <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>gender <span class="sc">==</span> <span class="st">"Female"</span>, <span class="st">"fev1_phase2"</span>]</span>
+<span id="cb96-386"><a href="#cb96-386" aria-hidden="true" tabindex="-1"></a>  males         <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>gender <span class="sc">==</span> <span class="st">"Male"</span>, <span class="st">"fev1_phase2"</span>]</span>
+<span id="cb96-387"><a href="#cb96-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-388"><a href="#cb96-388" aria-hidden="true" tabindex="-1"></a>  curr_smokers  <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>smoking_status <span class="sc">==</span> <span class="st">"Current Smoker"</span>, <span class="st">"fev1_phase2"</span>]</span>
+<span id="cb96-389"><a href="#cb96-389" aria-hidden="true" tabindex="-1"></a>  form_smokers  <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>smoking_status <span class="sc">==</span> <span class="st">"Former Smoker"</span>, <span class="st">"fev1_phase2"</span>]</span>
+<span id="cb96-390"><a href="#cb96-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-391"><a href="#cb96-391" aria-hidden="true" tabindex="-1"></a>  hay_fever_yes <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>hay_fever <span class="sc">==</span> <span class="st">"Yes"</span>, <span class="st">"fev1_phase2"</span>]</span>
+<span id="cb96-392"><a href="#cb96-392" aria-hidden="true" tabindex="-1"></a>  hay_fever_no  <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>hay_fever <span class="sc">==</span> <span class="st">"No"</span>, <span class="st">"fev1_phase2"</span>]</span>
+<span id="cb96-393"><a href="#cb96-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-394"><a href="#cb96-394" aria-hidden="true" tabindex="-1"></a>  asthma_yes    <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>asthma <span class="sc">==</span> <span class="st">"Yes"</span>, <span class="st">"fev1_phase2"</span>]</span>
+<span id="cb96-395"><a href="#cb96-395" aria-hidden="true" tabindex="-1"></a>  asthma_no     <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>asthma <span class="sc">==</span> <span class="st">"No"</span>, <span class="st">"fev1_phase2"</span>]</span>
+<span id="cb96-396"><a href="#cb96-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-397"><a href="#cb96-397" aria-hidden="true" tabindex="-1"></a>  copd_yes      <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>copd <span class="sc">==</span> <span class="st">"Yes"</span>, <span class="st">"fev1_phase2"</span>]</span>
+<span id="cb96-398"><a href="#cb96-398" aria-hidden="true" tabindex="-1"></a>  copd_no       <span class="ot">&lt;-</span> boot_sample[boot_sample<span class="sc">$</span>copd <span class="sc">==</span> <span class="st">"No"</span>, <span class="st">"fev1_phase2"</span>]</span>
+<span id="cb96-399"><a href="#cb96-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-400"><a href="#cb96-400" aria-hidden="true" tabindex="-1"></a>  <span class="co">#calculate and store mean differences for each group</span></span>
+<span id="cb96-401"><a href="#cb96-401" aria-hidden="true" tabindex="-1"></a>  gender_diff <span class="ot">&lt;-</span> <span class="fu">mean</span>(females) <span class="sc">-</span> <span class="fu">mean</span>(males)</span>
+<span id="cb96-402"><a href="#cb96-402" aria-hidden="true" tabindex="-1"></a>    gender_diffs[i] <span class="ot">&lt;-</span> gender_diff</span>
+<span id="cb96-403"><a href="#cb96-403" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-404"><a href="#cb96-404" aria-hidden="true" tabindex="-1"></a>  smoking_status_diff <span class="ot">&lt;-</span> <span class="fu">mean</span>(curr_smokers) <span class="sc">-</span> <span class="fu">mean</span>(form_smokers)</span>
+<span id="cb96-405"><a href="#cb96-405" aria-hidden="true" tabindex="-1"></a>    smoking_diffs[i] <span class="ot">&lt;-</span> smoking_status_diff</span>
+<span id="cb96-406"><a href="#cb96-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-407"><a href="#cb96-407" aria-hidden="true" tabindex="-1"></a>  hay_fever_diff <span class="ot">&lt;-</span> <span class="fu">mean</span>(hay_fever_no) <span class="sc">-</span> <span class="fu">mean</span>(hay_fever_yes)</span>
+<span id="cb96-408"><a href="#cb96-408" aria-hidden="true" tabindex="-1"></a>    hayfev_diffs[i] <span class="ot">&lt;-</span>  hay_fever_diff</span>
+<span id="cb96-409"><a href="#cb96-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-410"><a href="#cb96-410" aria-hidden="true" tabindex="-1"></a>  asthma_diff <span class="ot">&lt;-</span> <span class="fu">mean</span>(asthma_no) <span class="sc">-</span> <span class="fu">mean</span>(asthma_yes)</span>
+<span id="cb96-411"><a href="#cb96-411" aria-hidden="true" tabindex="-1"></a>    asthma_diffs[i] <span class="ot">&lt;-</span>  asthma_diff</span>
+<span id="cb96-412"><a href="#cb96-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-413"><a href="#cb96-413" aria-hidden="true" tabindex="-1"></a>  copd_diff <span class="ot">&lt;-</span> <span class="fu">mean</span>(copd_no) <span class="sc">-</span> <span class="fu">mean</span>(copd_yes)</span>
+<span id="cb96-414"><a href="#cb96-414" aria-hidden="true" tabindex="-1"></a>    copd_diffs[i] <span class="ot">&lt;-</span> copd_diff</span>
+<span id="cb96-415"><a href="#cb96-415" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb96-416"><a href="#cb96-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-417"><a href="#cb96-417" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"95% Confidence Interval for Mean Difference in phase 2 FEV1 by Gender:"</span>)</span>
+<span id="cb96-418"><a href="#cb96-418" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">quantile</span>(gender_diffs, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>)))</span>
+<span id="cb96-419"><a href="#cb96-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-420"><a href="#cb96-420" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"95% Confidence Interval for Mean Difference in phase 2 FEV1 by Smoking Status:"</span>)</span>
+<span id="cb96-421"><a href="#cb96-421" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">quantile</span>(smoking_diffs, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>)))</span>
+<span id="cb96-422"><a href="#cb96-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-423"><a href="#cb96-423" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"95% Confidence Interval for Mean Difference in phase 2 FEV1 by Hay Fever:"</span>)</span>
+<span id="cb96-424"><a href="#cb96-424" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">quantile</span>(hayfev_diffs, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>)))</span>
+<span id="cb96-425"><a href="#cb96-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-426"><a href="#cb96-426" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"95% Confidence Interval for Mean Difference in phase 2 FEV1 by Asthma:"</span>)</span>
+<span id="cb96-427"><a href="#cb96-427" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">quantile</span>(asthma_diffs, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>)))</span>
+<span id="cb96-428"><a href="#cb96-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-429"><a href="#cb96-429" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"95% Confidence Interval for Mean Difference in phase 2 FEV1 by COPD:"</span>)</span>
+<span id="cb96-430"><a href="#cb96-430" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">quantile</span>(copd_diffs, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>)))</span>
+<span id="cb96-431"><a href="#cb96-431" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb96-432"><a href="#cb96-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-433"><a href="#cb96-433" aria-hidden="true" tabindex="-1"></a>Based on the bootstrapped confidence intervals I created, I can conclude that:</span>
+<span id="cb96-434"><a href="#cb96-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-435"><a href="#cb96-435" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>females have significantly lower phase 2 FEV1 scores than males</span>
+<span id="cb96-436"><a href="#cb96-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-437"><a href="#cb96-437" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>current smokers have significantly greater phase 2 fev1 scores than former smokers</span>
+<span id="cb96-438"><a href="#cb96-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-439"><a href="#cb96-439" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>there is no significant difference in phase 2 FEV1 scores for patients with hay fever and patients who do not have hay fever (0 is contained within the interval)</span>
+<span id="cb96-440"><a href="#cb96-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-441"><a href="#cb96-441" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>patients without asthma have significantly greater phase 2 fev1 scores than patients with asthma</span>
+<span id="cb96-442"><a href="#cb96-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-443"><a href="#cb96-443" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>patients without COPD have signifcantly greater phase 2 fev1 scores than patients with asthma</span>
+<span id="cb96-444"><a href="#cb96-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-445"><a href="#cb96-445" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Numeric Variables</span></span>
+<span id="cb96-446"><a href="#cb96-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-447"><a href="#cb96-447" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Fit 5 simple linear regressions using the five numeric variables previously visualized</span>
+<span id="cb96-448"><a href="#cb96-448" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-449"><a href="#cb96-449" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Conduct a statistical test to determine if the five slopes from regressions are significantly different from 0</span>
+<span id="cb96-450"><a href="#cb96-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-451"><a href="#cb96-451" aria-hidden="true" tabindex="-1"></a><span class="in">```{r bootstrap confidence intervals on regression coefficients}</span></span>
+<span id="cb96-452"><a href="#cb96-452" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. fit linear regressions</span></span>
+<span id="cb96-453"><a href="#cb96-453" aria-hidden="true" tabindex="-1"></a>fit_lung_insp <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> lung_volume_inspiratory, <span class="at">data =</span> COPD_data_clean)</span>
+<span id="cb96-454"><a href="#cb96-454" aria-hidden="true" tabindex="-1"></a>fit_lung_exp_log <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> lung_volume_expiratory_log, <span class="at">data =</span> COPD_data_clean)</span>
+<span id="cb96-455"><a href="#cb96-455" aria-hidden="true" tabindex="-1"></a>fit_smoking <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> duration_smoking, <span class="at">data =</span> COPD_data_clean)</span>
+<span id="cb96-456"><a href="#cb96-456" aria-hidden="true" tabindex="-1"></a>fit_cigs <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> cigs_per_day_avg_log, <span class="at">data =</span> COPD_data_clean)</span>
+<span id="cb96-457"><a href="#cb96-457" aria-hidden="true" tabindex="-1"></a>fit_FVC <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> fvc, <span class="at">data =</span> COPD_data_clean)</span>
+<span id="cb96-458"><a href="#cb96-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-459"><a href="#cb96-459" aria-hidden="true" tabindex="-1"></a><span class="co"># print original fitted linear models</span></span>
+<span id="cb96-460"><a href="#cb96-460" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"phase2_fev1 ="</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_lung_insp)[<span class="dv">1</span>], <span class="dv">3</span>), <span class="st">"+"</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_lung_insp)[<span class="dv">2</span>], <span class="dv">3</span>), <span class="st">"(lung_volume_inspiratory)"</span>))</span>
+<span id="cb96-461"><a href="#cb96-461" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"phase2_fev1 ="</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_lung_exp_log)[<span class="dv">1</span>], <span class="dv">3</span>), <span class="st">"+"</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_lung_exp_log)[<span class="dv">2</span>], <span class="dv">3</span>), <span class="st">"(lung_volume_expiratory_log)"</span>))</span>
+<span id="cb96-462"><a href="#cb96-462" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"phase2_fev1 ="</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_smoking)[<span class="dv">1</span>], <span class="dv">3</span>), <span class="st">"+"</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_smoking)[<span class="dv">2</span>], <span class="dv">3</span>), <span class="st">"(duration_smoking)"</span>))</span>
+<span id="cb96-463"><a href="#cb96-463" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"phase2_fev1 ="</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_cigs)[<span class="dv">1</span>], <span class="dv">3</span>), <span class="st">"+"</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_cigs)[<span class="dv">2</span>], <span class="dv">3</span>), <span class="st">"(cigs_per_day_avg_log)"</span>))</span>
+<span id="cb96-464"><a href="#cb96-464" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"phase2_fev1 ="</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_FVC)[<span class="dv">1</span>], <span class="dv">3</span>), <span class="st">"+"</span>, <span class="fu">round</span>(<span class="fu">coef</span>(fit_FVC)[<span class="dv">2</span>], <span class="dv">3</span>), <span class="st">"(fvc)"</span>))</span>
+<span id="cb96-465"><a href="#cb96-465" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"----"</span>)</span>
+<span id="cb96-466"><a href="#cb96-466" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-467"><a href="#cb96-467" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.</span></span>
+<span id="cb96-468"><a href="#cb96-468" aria-hidden="true" tabindex="-1"></a><span class="co"># To determine if the slopes from the linear models above are different from zero, I will use bootstrapping to create confidence intervals</span></span>
+<span id="cb96-469"><a href="#cb96-469" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">2000</span> <span class="co"># number of bootstrapped samples</span></span>
+<span id="cb96-470"><a href="#cb96-470" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(COPD_data_clean<span class="sc">$</span>fev1_phase2) <span class="co">#sample szie</span></span>
+<span id="cb96-471"><a href="#cb96-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-472"><a href="#cb96-472" aria-hidden="true" tabindex="-1"></a><span class="co">#vectors to store slopes</span></span>
+<span id="cb96-473"><a href="#cb96-473" aria-hidden="true" tabindex="-1"></a>lung_in_slopes  <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
+<span id="cb96-474"><a href="#cb96-474" aria-hidden="true" tabindex="-1"></a>lung_exp_slopes <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
+<span id="cb96-475"><a href="#cb96-475" aria-hidden="true" tabindex="-1"></a>smoking_slopes  <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
+<span id="cb96-476"><a href="#cb96-476" aria-hidden="true" tabindex="-1"></a>cigs_slopes     <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
+<span id="cb96-477"><a href="#cb96-477" aria-hidden="true" tabindex="-1"></a>fvc_slopes      <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> B)</span>
+<span id="cb96-478"><a href="#cb96-478" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-479"><a href="#cb96-479" aria-hidden="true" tabindex="-1"></a><span class="co">#loop</span></span>
+<span id="cb96-480"><a href="#cb96-480" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>B){</span>
+<span id="cb96-481"><a href="#cb96-481" aria-hidden="true" tabindex="-1"></a>  <span class="co">#create random sample with replacement</span></span>
+<span id="cb96-482"><a href="#cb96-482" aria-hidden="true" tabindex="-1"></a>  boot_indexes <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(COPD_data_clean), <span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb96-483"><a href="#cb96-483" aria-hidden="true" tabindex="-1"></a>  boot_sample <span class="ot">&lt;-</span> COPD_data_clean[boot_indexes, ]</span>
+<span id="cb96-484"><a href="#cb96-484" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-485"><a href="#cb96-485" aria-hidden="true" tabindex="-1"></a>  <span class="co">#fit linear models</span></span>
+<span id="cb96-486"><a href="#cb96-486" aria-hidden="true" tabindex="-1"></a>  boot_fit_lung_insp <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> lung_volume_inspiratory, <span class="at">data =</span> boot_sample)</span>
+<span id="cb96-487"><a href="#cb96-487" aria-hidden="true" tabindex="-1"></a>  boot_fit_lung_exp_log <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> lung_volume_expiratory_log, <span class="at">data =</span> boot_sample)</span>
+<span id="cb96-488"><a href="#cb96-488" aria-hidden="true" tabindex="-1"></a>  boot_fit_smoking <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> duration_smoking, <span class="at">data =</span> boot_sample)</span>
+<span id="cb96-489"><a href="#cb96-489" aria-hidden="true" tabindex="-1"></a>  boot_fit_cigs <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> cigs_per_day_avg_log, <span class="at">data =</span> boot_sample)</span>
+<span id="cb96-490"><a href="#cb96-490" aria-hidden="true" tabindex="-1"></a>  boot_fit_FVC <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev1_phase2 <span class="sc">~</span> fvc, <span class="at">data =</span> boot_sample)</span>
+<span id="cb96-491"><a href="#cb96-491" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-492"><a href="#cb96-492" aria-hidden="true" tabindex="-1"></a>  <span class="co">#store slopes</span></span>
+<span id="cb96-493"><a href="#cb96-493" aria-hidden="true" tabindex="-1"></a>    lung_in_slopes[i] <span class="ot">&lt;-</span> <span class="fu">coef</span>(boot_fit_lung_insp)[<span class="dv">2</span>]</span>
+<span id="cb96-494"><a href="#cb96-494" aria-hidden="true" tabindex="-1"></a>    lung_exp_slopes[i] <span class="ot">&lt;-</span> <span class="fu">coef</span>(boot_fit_lung_exp_log)[<span class="dv">2</span>]</span>
+<span id="cb96-495"><a href="#cb96-495" aria-hidden="true" tabindex="-1"></a>    smoking_slopes[i] <span class="ot">&lt;-</span>  <span class="fu">coef</span>(boot_fit_smoking)[<span class="dv">2</span>]</span>
+<span id="cb96-496"><a href="#cb96-496" aria-hidden="true" tabindex="-1"></a>    cigs_slopes[i]     <span class="ot">&lt;-</span>  <span class="fu">coef</span>(boot_fit_cigs)[<span class="dv">2</span>]</span>
+<span id="cb96-497"><a href="#cb96-497" aria-hidden="true" tabindex="-1"></a>    fvc_slopes [i]     <span class="ot">&lt;-</span>  <span class="fu">coef</span>(boot_fit_FVC)[<span class="dv">2</span>]</span>
+<span id="cb96-498"><a href="#cb96-498" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb96-499"><a href="#cb96-499" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb96-500"><a href="#cb96-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-501"><a href="#cb96-501" aria-hidden="true" tabindex="-1"></a>Based on my linear regression models, and the bootstrapped 95% confidence intervals for the slopes of the regression models, I can conclude that,</span>
+<span id="cb96-502"><a href="#cb96-502" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-503"><a href="#cb96-503" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>lung volume inspiratory and phase 2 FEV1 are significantly correlated (the slope is significantly greater than 0) because 0 is not contained in the confidence interval</span>
+<span id="cb96-504"><a href="#cb96-504" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-505"><a href="#cb96-505" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>lung volume expiratory (log transformed) and phase 2 FEV1 are significantly correlated (slope is significantly less than 0) because 0 is not contained within the interval</span>
+<span id="cb96-506"><a href="#cb96-506" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-507"><a href="#cb96-507" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>duration smoking and phase 2 fev1 score are significantly correlated (slope is significantly less than 0) because 0 is not contained within the interval</span>
+<span id="cb96-508"><a href="#cb96-508" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-509"><a href="#cb96-509" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>average number of cigarettes per day (log transformed) and phase 2 fev1 score are significantly correlated (slope is significantly less than 0) because 0 is not contained within the interval</span>
+<span id="cb96-510"><a href="#cb96-510" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-511"><a href="#cb96-511" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>FVC and phase 2 fev1 score are significantly correlated (slope is significantly greater than 0) because 0 is not contained within the interval</span>
+<span id="cb96-512"><a href="#cb96-512" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-513"><a href="#cb96-513" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
+<span id="cb96-514"><a href="#cb96-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-515"><a href="#cb96-515" aria-hidden="true" tabindex="-1"></a>Affecting over 16 million Americans, chronic obstructive pulmonary disease (COPD) is commonly caused by cigarette smoking, asthma, and toxin inhalation. There is no cure for COPD; however, patients receive care to manage symptoms and slow the progression of the disease. One way to measure the severity of COPD is through spirometry. One spirometry measure is the forced expiratory volume (FEV1), which measures the volume of air forcefully exhaled in 1 second. The aim of this study was to compare patients' FEV1 scores at the five year follow up (denoted as "phase 2"), to other variables from the patient data.</span>
 <span id="cb96-516"><a href="#cb96-516" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-517"><a href="#cb96-517" aria-hidden="true" tabindex="-1"></a>The data used came from the COPDGene Research Group. It included separate datasets of demographic, spirometry and medical image data for 2620 patients. The datasets were merged together by patient id. The data was cleaned to remove missing values, and convert variables into more usable data types. The final dataset was 2600 rows and 41 variables. The variables included information about visit date, patients’ age, gender, race, smoking status, blood pressure, heart rate, height, weight, and bmi. There were also variables about the patient's smoking history and any respiratory illness diagnoses. Spirometry variables included lung volume inspiratory and expiratory (the volume of air in lungs at inhalation and exhalation), FEV1, FEV1 at phase 2 (follow up), forced vital capacity (FVC) and fev1_fvc ratio.</span>
-<span id="cb96-518"><a href="#cb96-518" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-517"><a href="#cb96-517" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-518"><a href="#cb96-518" aria-hidden="true" tabindex="-1"></a>The data used came from the COPDGene Research Group. It included separate datasets of demographic, spirometry and medical image data for 2620 patients. The datasets were merged together by patient id. The data was cleaned to remove missing values, and convert variables into more usable data types. The final dataset was 2600 rows and 41 variables. The variables included information about visit date, patients’ age, gender, race, smoking status, blood pressure, heart rate, height, weight, and bmi. There were also variables about the patient's smoking history and any respiratory illness diagnoses. Spirometry variables included lung volume inspiratory and expiratory (the volume of air in lungs at inhalation and exhalation), FEV1, FEV1 at phase 2 (follow up), forced vital capacity (FVC) and fev1_fvc ratio.</span>
 <span id="cb96-519"><a href="#cb96-519" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-520"><a href="#cb96-520" aria-hidden="true" tabindex="-1"></a>Exploratory analysis was performed next. A function was created to return summary statistics for numeric variables, and a frequency table for character variables. The lapply function was utilized to apply the custom function to each column in the dataset. The ggplot2 library was used to create histograms for all numeric and integer variables. After reviewing these histograms, some variables were transformed to be more normally distributed to be used for analysis. The fev1_fvc_ratio was left-skewed, so a square transformation was performed. Lung volume expiratory, emphysema percentage, average cigarettes per day, and smoking start age were all highly right skewed and log transformations were performed on these.</span>
-<span id="cb96-521"><a href="#cb96-521" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-520"><a href="#cb96-520" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-521"><a href="#cb96-521" aria-hidden="true" tabindex="-1"></a>Exploratory analysis was performed next. A function was created to return summary statistics for numeric variables, and a frequency table for character variables. The lapply function was utilized to apply the custom function to each column in the dataset. The ggplot2 library was used to create histograms for all numeric and integer variables. After reviewing these histograms, some variables were transformed to be more normally distributed to be used for analysis. The fev1_fvc_ratio was left-skewed, so a square transformation was performed. Lung volume expiratory, emphysema percentage, average cigarettes per day, and smoking start age were all highly right skewed and log transformations were performed on these.</span>
 <span id="cb96-522"><a href="#cb96-522" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-523"><a href="#cb96-523" aria-hidden="true" tabindex="-1"></a>Next, to compare phase 2 FEV1 scores between different groups of patients, ggplot2 was used to create boxplots of categorical variables. The chosen categorical variables were gender, smoking status, hay fever, asthma, and copd diagnosis. The boxplots showed differences between groups for gender, asthma and copd. Scatterplots were created with ggplot2 to look for relationships between numeric variables and phase 2 fev1 scores. Lung volume inspiratory, lung volume expiratory (log-transformed), duration smoking, average number of cigarettes per day (log-transformed) and FVC were graphed as explanatory variables with phase 2 FEV1 as the response. The scatterplots for lung volume inspiratory and FVC showed positive linear relationships, while lung volume expiratory and duration smoking showed negative linear relationships.</span>
-<span id="cb96-524"><a href="#cb96-524" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-523"><a href="#cb96-523" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-524"><a href="#cb96-524" aria-hidden="true" tabindex="-1"></a>Next, to compare phase 2 FEV1 scores between different groups of patients, ggplot2 was used to create boxplots of categorical variables. The chosen categorical variables were gender, smoking status, hay fever, asthma, and copd diagnosis. The boxplots showed differences between groups for gender, asthma and copd. Scatterplots were created with ggplot2 to look for relationships between numeric variables and phase 2 fev1 scores. Lung volume inspiratory, lung volume expiratory (log-transformed), duration smoking, average number of cigarettes per day (log-transformed) and FVC were graphed as explanatory variables with phase 2 FEV1 as the response. The scatterplots for lung volume inspiratory and FVC showed positive linear relationships, while lung volume expiratory and duration smoking showed negative linear relationships.</span>
 <span id="cb96-525"><a href="#cb96-525" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-526"><a href="#cb96-526" aria-hidden="true" tabindex="-1"></a>Finally, bootstrapping was implemented to test the significance of the relationships seen in the data visualizations that were created. Bootstrapping is a method that involves repeatedly sampling a data sample with replacement. This process simulates the sampling distribution, which allows for statistical inference to be made through confidence intervals. Bootstrapped confidence intervals were created for the mean difference in phase 2 FEV1 scores for each of the categorical variables chosen. These confidence intervals revealed that females have significantly lower phase 2 FEV1 scores than males do, current smokers have significantly greater phase 2 FEV1 scores than former smokers, hay fever diagnosis does not relate to phase 2 fev1 scores, patients without asthma have greater phase 2 fev1 scores than patients with asthma, and patients without copd have greater phase 2 copd scores than patients without copd. The difference in phase 2 FEV1 scores between current and former smokers had a 95% confidence interval of <span class="sc">\[</span>0.09, 0.21<span class="sc">\]</span> which are relatively small values compared to the difference of patients with or without COPD, <span class="sc">\[</span>0.92, 1.04<span class="sc">\]</span>, so even though the differences for smoking status are statistically significant, they may not be clinically significant. For numeric variables, bootstrapped confidence intervals were made for the slopes of a simple linear regression model between each one of the chosen numeric variables and phase 2 FEV1 scores. As expected based on the scatterplots, the confidence intervals showed lung volume inspiratory and FVC had slopes significantly greater than zero, indicating positive linear relationships, and lung volume expiratory, duration smoking, and average cigarettes per day had slopes significantly less than zero, indicating negative linear relationships with phase 2 FEV1. Overall, many variables, categorical and quantitative, have significant relationships with phase 2 fev1 scores, so more analysis is needed to determine which variables are the most significant.</span>
+<span id="cb96-526"><a href="#cb96-526" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-527"><a href="#cb96-527" aria-hidden="true" tabindex="-1"></a>Finally, bootstrapping was implemented to test the significance of the relationships seen in the data visualizations that were created. Bootstrapping is a method that involves repeatedly sampling a data sample with replacement. This process simulates the sampling distribution, which allows for statistical inference to be made through confidence intervals. Bootstrapped confidence intervals were created for the mean difference in phase 2 FEV1 scores for each of the categorical variables chosen. These confidence intervals revealed that females have significantly lower phase 2 FEV1 scores than males do, current smokers have significantly greater phase 2 FEV1 scores than former smokers, hay fever diagnosis does not relate to phase 2 fev1 scores, patients without asthma have greater phase 2 fev1 scores than patients with asthma, and patients without copd have greater phase 2 copd scores than patients without copd. The difference in phase 2 FEV1 scores between current and former smokers had a 95% confidence interval of <span class="sc">\[</span>0.09, 0.21<span class="sc">\]</span> which are relatively small values compared to the difference of patients with or without COPD, <span class="sc">\[</span>0.92, 1.04<span class="sc">\]</span>, so even though the differences for smoking status are statistically significant, they may not be clinically significant. For numeric variables, bootstrapped confidence intervals were made for the slopes of a simple linear regression model between each one of the chosen numeric variables and phase 2 FEV1 scores. As expected based on the scatterplots, the confidence intervals showed lung volume inspiratory and FVC had slopes significantly greater than zero, indicating positive linear relationships, and lung volume expiratory, duration smoking, and average cigarettes per day had slopes significantly less than zero, indicating negative linear relationships with phase 2 FEV1. Overall, many variables, categorical and quantitative, have significant relationships with phase 2 fev1 scores, so more analysis is needed to determine which variables are the most significant.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
