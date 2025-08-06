@@ -42,16 +42,16 @@ library(ggplot2)
 ```{r load datasets}
 #import COPD demographics data from CSV file
 COPD_demographics <- read.csv("https://raw.githubusercontent.com/khasenst/datasets_teaching/refs/heads/main/copd_data_demographics.csv")
-  head(COPD_demographics)
+  str(COPD_demographics)
 
 #import COPD medical images data from JSON file
 COPD_medical_images <- fromJSON("https://raw.githubusercontent.com/khasenst/datasets_teaching/refs/heads/main/copd_data_imaging.json")
-  head(COPD_medical_images)
+  str(COPD_medical_images)
 
 #import COPD spirometry data from HTML file
 html <- read_html("https://raw.githubusercontent.com/khasenst/datasets_teaching/refs/heads/main/copd_data_spirometry.html")
 COPD_spirometry <- as.data.frame(html_table(html)[[1]])
-  head(COPD_spirometry)
+  str(COPD_spirometry)
 
 #import data dictionary
 COPD_data_dictionary <- read.csv("https://raw.githubusercontent.com/khasenst/datasets_teaching/refs/heads/main/copd_data_dictionary.csv")
@@ -161,8 +161,9 @@ stats <- function(var) {
   }
 }
 
-#test function for numeric and factor variables
+# test function on categorical variable
 stats(COPD_data_clean$asthma)
+# test function on numeric variable
 stats(COPD_data_clean$bmi)
 ```
 
