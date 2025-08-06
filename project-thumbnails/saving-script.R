@@ -1,0 +1,1 @@
+ggsave(filename = "name.png", path = "~/portfolio-website/project-thumbnails")

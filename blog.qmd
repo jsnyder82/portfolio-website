@@ -41,7 +41,7 @@ Love,
     
 ----------------------------------------------------------------------------------------
 
-## Why I Think Data Viz is Cool
+## Why I Love Data Visualization
 
 Lately, I've been trying to navigate through the differences in data science, data analytics, data engineering, and all the other options for careers generally dealing with data. Throughout all of the different roles and responsibilities, my favorite data skill has to be data visualization.
 

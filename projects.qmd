@@ -4,4 +4,12 @@ title: "Projects"
 
 For now, I've linked some of my past class projects. I'll be updating this page frequently with more personal projects, so check back for updates!
 
+:::: grid
+::: card
+![](project-thumbnails/COPD.png)
 
+### [COPD Gene Project - Class Final](projects-folder/COPD_gene_project.qmd)
+
+Analyze relationship between Phase 2 FEV1 Scores and other variables in data set Tags: R, COPD, Data Visualization, Bootstrapping
+:::
+::::
