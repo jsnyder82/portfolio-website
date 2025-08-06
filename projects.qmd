@@ -2,7 +2,7 @@
 title: "Projects"
 ---
 
-For now, I've linked some of my past class projects. I'll be updating this page frequently with more personal projects, so check back for updates!
+On to the fun part! For now, I've linked past class projects. I'll be updating this page with more personal projects, so check back for updates.
 
 ::: grid
 ::: card

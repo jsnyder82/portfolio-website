@@ -2,7 +2,7 @@
 title: "Blog"
 ---
 
-Welcome to my blog! Check in for posts about data, design, and the creative process behind my projects.
+Welcome to my blog! Check in for posts about data, design, the creative process behind my projects, random (somewhat relevant) thoughts I have, and more. I hope reading some of my posts helps you get to know me and how my brain works.
 
 ## Some Thoughts on Gen Z and AI
 
