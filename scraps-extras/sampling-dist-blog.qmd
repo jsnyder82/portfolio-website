@@ -1,0 +1,33 @@
+---
+title: "sampling-dist-blog"
+format: html
+---
+
+Why do we care about uncertainty and what is a sampling distribution? I'm so glad you asked! Let's play a little imagination game to understand these concepts.
+
+Imagine you want to know the average number of pets your friends have. Random, I know, but easy to understand. To do this, you ask 5 people you know how many pets they have. You then take the mean of the number of pets for these 5 people. Say you get an average of 2.2, so you tell your friends that on average, people have 2.2 pets each. Maybe you have a friend with no pets, or a friend with 8 pets, and they might ask "how sure are you about that?", because your estimate doesn't match their experience or what they would have guessed as the average number of pets.
+
+This is why we care about uncertainty! We want to be able to answer the "how sure are you about your estimate?" question.
+
+In this scenario, we could easily repeat our "survey". Maybe we ask 5 more friends, find the mean number of pets those 5 have and compare it to our first estimate. This would give us some information on how accurate our first estimate was. To get an even better understanding, we could repeat our "survey" many times, each time asking 5 more friends and finding the mean number of pets. Each time we do this, we are going to get a slightly different mean, because people are different (there is variation in the data!). We can take all of these different means and plot them on a histogram that might look something like this:
+
+```{r sampling distribution histogram}
+#| echo: false
+library(ggplot2)
+pets <- data.frame(avg_pets = c(1.1, 2.2, 4, 2.9, 3.1, 1.7, 0.1, 1.2, 2.3, 0.6, 1.1, 0.2, 1.8))
+
+ggplot(data = pets, aes(x = avg_pets)) + 
+  geom_histogram(color = "white", fill = "seagreen", binwidth = 1) + 
+  labs(title = "Sampling Distribution for Average Number of Pets*",
+       x = "Mean Number of Pets", 
+       y = "Number of Samples",
+       subtitle = "*fake data for example purposes only") + 
+  theme_light() + 
+  theme(text = element_text(size = 13),
+        plot.subtitle = element_text(size = 10))
+```
+
+
+The histogram shows our true sampling distribution. The possible values for the mean of each sample are along the x axis. The height of each bar (the y-axis value) is the number of samples at the corresponding x-axis (mean) value. We can then use this sampling distribution to show how sure we are about our answer. If the histogram showed a very wide, spread out, distribution, we'd be less certain about our estimate than if the histogram showed a very tall and tightly bounded distribution.
+
+Now in real life, with real data from a survey, experiment, consumer reports, or any other sample from a population, we usually can't redo our experiment or recollect data over and over again. It would be expensive and timely to do that, and well unnecessary because we can use statistics instead (yay!). There are a couple of options for estimating uncertainty. We can either use known information about our data to make assumptions and use a theoretical sampling distribution, or we can simulate the sampling distribution of our data using bootstrapping. If your data follows certain distribution specific assumptions, using well known sampling distributions like the normal distribution or binomial distribution is a good choice and makes uncertainty quick and easy to calculate. If you don't know much about your data, or it violates common distribution assumptions, bootstrapping is a better option for estimating uncertainty.
