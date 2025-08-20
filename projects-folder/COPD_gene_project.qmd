@@ -207,7 +207,7 @@ lapply(COPD_data_clean[ , names(COPD_data_clean) %in% c("lung_volume_inspiratory
 for (col in names(COPD_data_clean)) {
  if(is.numeric(COPD_data_clean[,col]) | is.integer(COPD_data_clean[,col])){
    plot <-  ggplot(data = COPD_data_clean, aes(x = .data[[col]])) +
-      geom_histogram(color = "white", fill = "steelblue") +
+      geom_histogram(color = "white", fill = "steelblue", bins = 30 ) +
         labs(title = paste("Frequency of", col)) + 
         theme_light()
 
@@ -256,7 +256,7 @@ transformed_vars <- COPD_data_clean[, names(COPD_data_clean) %in%
 for (col in names(transformed_vars)) {
  if(is.numeric(COPD_data_clean[,col]) | is.integer(COPD_data_clean[,col])){
    plot <-  ggplot(data = COPD_data_clean, aes(x = .data[[col]])) +
-      geom_histogram(color = "white", fill = "darkgreen") +
+      geom_histogram(color = "white", fill = "darkgreen", bins = 30) +
         labs(title = paste("Frequency of", col)) + 
         theme_light()
 
@@ -494,6 +494,24 @@ for(i in 1:B){
     cigs_slopes[i]     <-  coef(boot_fit_cigs)[2]
     fvc_slopes [i]     <-  coef(boot_fit_FVC)[2]
 }
+```
+
+```{r print CI for regressions}
+#create and print confidence intervals for slopes
+print("95% confidence interval for slope of linear regression on phase 2 FEV1 w.r.t. lung_volume_inspiratory")
+print(quantile(lung_in_slopes, c(0.025, 0.975)))
+
+print("95% confidence interval for slope of linear regressionon phase 2 FEV1 w.r.t. lung_volume_expiratory_log")
+print(quantile(lung_exp_slopes, c(0.025, 0.975)))
+
+print("95% confidence interval for slope of linear regression on phase 2 FEV1 w.r.t. duration_smoking")
+print(quantile(smoking_slopes, c(0.025, 0.975)))
+
+print("95% confidence interval for slope of linear regression on phase 2 FEV1 w.r.t. cigs_per_day_avg_log")
+print(quantile(cigs_slopes, c(0.025, 0.975)))
+
+print("95% confidence interval for slope of linear regression on phase 2 FEV1 w.r.t. fvc")
+print(quantile(fvc_slopes, c(0.025, 0.975)))
 ```
 
 Based on my linear regression models, and the bootstrapped 95% confidence intervals for the slopes of the regression models, I can conclude that,
