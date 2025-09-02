@@ -1,0 +1,16 @@
+---
+title: "data-viz-problem"
+format: html
+---
+
+If you read my thoughts on gen Z and AI, you'll know I think my generation needs some help maintaining our critical thinking skills (aka not letting AI make all of our decisions for us). What follows is my thought process on how creating more data visualizations on current, informative topics would be of benefit to young people.
+
+Naturally, I began to think about how I could apply my skills to help my generation and the future ones continue to make informed decisions for themselves. Thinking through my given information (thanks math), we've got,
+
+a population of young people overstimulated by information overload and decision fatigue
+
+contained within a digital space, a time of screens, video games, bright, flashing colors, and 15 second videos
+
+screen dependency that has led to health issues galore, including, but definitely not limited to, severe attention span issues
+
+With this information, I thought back through my question. How can I help people get engaged in interacting with information to make their own decisions? Well, with the target audience in mind, it seems obvious: make the information visual. While a histogram is never going to keep up with a TikTok video, if it's visually aesthetic, easy to read, and clearly communicates relevant information, at least people can look at it and learn something, which is a win in my book. If it can highlight some frequently overlooked information, or lead one's eye to an important pattern even better. If it makes even one person stop and think a little deeper about the topic, and why such a pattern might emerge, that's hitting the jackpot.

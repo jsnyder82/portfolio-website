@@ -2,35 +2,41 @@
 title: "Blog"
 ---
 
-Welcome to my blog! Check in for posts about data, design, the creative process behind my projects, random (somewhat relevant) thoughts I have, and more. I hope reading some of my posts helps you get to know me and how my brain works.
+Welcome to my blog! Check in for posts about my projects, statistics, coding, and information about me and my interests. I hope reading some of my posts helps you get to know me better and you learn something cool about statistics and data analysis.
 
-Click on the titles on the side to jump to different posts :) ----\>
+Click on the titles on the side to jump to different posts :)
 
 ## Pull Yourself up by Your (Block) Bootstraps
 
 Hello again,
 
-Today I'll be writing about the concept of block bootstrapping and how I used it in my research project at UC Irvine this summer (2025). As part of our final presentation at UCI, I got to teach the audience about this concept to explain my research findings and wanted to share it here.
+Today I'll be writing about the concept of block bootstrapping and how I used it in my research project at UC Irvine this summer (2025). As a part of our final presentation at UCI, I taught the audience about this concept to explain my research findings.
 
-Bootstrapping is a statistical method used to estimate the uncertainty of a desired statistic. It's typically used when you don't know the sampling distribution of the desired statistic or your data violates specific distribution assumptions, and therefore cannot use traditional methods of uncertainty estimation that use theoretical sampling distributions.
+Bootstrapping is a statistical method used to estimate the uncertainty of a desired statistic. It's typically used when you don't know the sampling distribution of the desired statistic or your data violates specific distribution assumptions, and therefore you cannot use traditional methods of uncertainty estimation that use theoretical sampling distributions.
 
-Quick reminders before we get into it!
+Reminders before we get into the bootstrapping!
 
-1\) The true sampling distribution of a sample statistic comes from repeating the experiment (e.g. taking a sample from the population) many times and recalculating the sample statistic each time. If you then plotted all the calculations of that sample statistic, you would see the sampling distribution. It's the probability distribution of all the possible values for the sample statistic. In reality, we usually don't know and can't find the true sampling distribution of a statistic because it would be costly and timely to repeat the experiment many times. Instead, we use theoretical sampling distributions that are common probability distributions that each come with their own assumptions about the data. We choose the theoretical sampling distribution based on characteristics like sample size, underlying population distribution, and the statistic we are interested in.
+1\) The true sampling distribution of a sample statistic would be found by repeating the experiment (e.g. taking a sample from the population) many times and recalculating the sample statistic each time. If you then plotted all the calculations of that sample statistic, you would see the sampling distribution.
+
+The sampling distribution is the probability distribution for the sample statistic. Each possible value of the sample statistic has a certain probability of occurring, and when you put all those probabilities together, you get a probability distribution. When that probability distribution is for a sample statistic, we call it a sampling distribution.
+
+In reality, we usually don't know and can't find the true sampling distribution of a statistic because it would be costly and timely to repeat the experiment many times. Instead, we use theoretical sampling distributions that are common probability distributions that each come with their own assumptions about the data. We choose the theoretical sampling distribution based on characteristics like sample size, underlying population distribution, and the statistic we are interested in calculating. For example, we can use the Central Limit Theorem to use the normal distribution as the sampling distribution for the sample mean when we have a large enough sample.
 
 2\) We use sampling distributions to estimate the uncertainty of a sample statistic. We are using what we know about the probability of observing that specific sample statistic (we know this from the sampling distribution) to say how certain we are that this sample statistic represents the true value of the population statistic.
 
 If our sample does not meet certain criteria or we don't have enough information about the underlying population to use theoretical sampling distributions, we can simulate the sampling distribution. Enter bootstrapping.
 
-Since we can't take new samples of data from the population to get the real sampling distribution, in bootstrapping, we treat our original sample as the "population" and randomly re-sample (with replacement) our "population" many times. At each re-sample, we calculate our statistic of interest, and store it. After repeating this process, we can use percentiles to calculate confidence intervals, showing the uncertainty of our original point estimate.
+Since we can't take new samples of data from the population to get the real sampling distribution, in bootstrapping, we treat our original sample as the "population" and randomly re-sample (with replacement) our "population" many times. At each re-sample, we calculate our statistic of interest, and store that information. After repeating this process many times, we can use percentiles of all our calculated statistics to calculate confidence intervals, showing the uncertainty of our original point estimate.
 
-Block-bootstrapping is a version of bootstrapping that is designed for dependent or highly correlated data. This is what I used in my project! The main difference from regular bootstrapping is that instead of re-sampling every individual data point, the data is grouped into clusters or blocks, and then blocks are chosen at random for each re-sample. There are many different methods for how to choose blocks or clusters of data, depending on the specifics of your data. This method is commonly used in time-series or spatial data, where there are groups of highly correlated or dependent data.
+Block-bootstrapping is a version of bootstrapping that is designed for dependent or highly correlated data. (This is what I used in my project!) The main difference from regular bootstrapping is that instead of re-sampling every individual data point, the data is grouped into clusters or blocks, and then blocks are chosen at random for each re-sample. There are many different methods for how to choose blocks or clusters of data, depending on the specifics of your data. This method is commonly used in time-series or spatial data, where there are groups of highly correlated or dependent data.
 
-I used this method of block-bootstrapping in my research project at ISI-BUDS. Here's a quick intro to my project and our dataset. The goal of our project was to understand the recruitment networks of internally displaced sex workers in Ukraine. The data was collected by the Alliance for Public Health, an NGO in Ukraine, using recruitment driven sampling. Individuals in the population of interest are chosen by the NGO, they are called the 'seed', they take the survey, and are given a set number of 'coupons' to give to people they know who are also eligible for the survey. Those people come in and take the survey and they get coupons, and so on. The resulting data is structured as trees, each tree starting with the seed. We could assume independence of the trees, because seeds are selected to cover a diverse population, and to reach networks that won't overlap. However, the data on individuals within the same tree is dependent data because an individual being in the study is dependent on them being recruited by a friend. This is an example of one of our data trees. Blue dots show local individuals, and red dots show internally displaced individuals.
+I used this method of block-bootstrapping in my research project at ISI-BUDS. Here's a quick intro to my project and our dataset.
+
+The goal of our project was to understand the recruitment networks of internally displaced sex workers in Ukraine. The data was collected by the Alliance for Public Health, an NGO in Ukraine, using recruitment driven sampling. Individuals in the population of interest are chosen by the NGO, they are called the 'seed', they take the survey, and are given a set number of 'coupons' to give to people they know who are also eligible for the survey. Those people come in and take the survey and they get coupons to give out, and so on. The resulting data is structured as trees, each tree starting with the seed. We could assume independence of the trees because seeds are selected to cover a diverse population, and to reach networks that won't overlap. However, the data on individuals within the same tree is dependent data because an individual being in the study is dependent on them being recruited by a friend or coworker. This is an example of one of our data trees. Blue dots show local individuals, and red dots show internally displaced individuals.
 
 ![](images/tree-12%20copy.png)
 
-The analysis we did on this individual-level data was to run binomial regressions to understand how the displacement status of the recruiter impacted the displacement status of the respondent. We needed to estimate the uncertainty of our regression coefficients, but could not use standard regression theory (theoretical sampling distributions) because that assumes data is independent, and our data is dependent. Since we had independence of trees, and each tree was essentially a block of dependent data, we used block bootstrapping to estimate our uncertainty.
+The analysis we did on this individual-level data was to run binomial regressions to understand how the displacement status of the recruiter impacted the displacement status of the respondent. We needed to estimate the uncertainty of our regression coefficients, but could not use standard regression theory (theoretical sampling distributions) because standard theory assumes data is independent, and our data is dependent. Since we had independence of trees, and each tree was essentially a block of dependent data, we used block bootstrapping to estimate our uncertainty.
 
 How I used Block Bootstrapping for this project:
 
@@ -38,7 +44,7 @@ First, we ran the regression on our original sample, aka our entire dataset of d
 
 ![](images/bootstrap-og.png)
 
-Next, we re-sampled our original sample of trees. We randomly select four numbers between 1 and 4 and take the data from the corresponding trees as our new sample, then run the regression on the new sample.
+Next, we re-sampled our original sample of trees. In the pictured example, we randomly select four numbers between 1 and 4 and take the data from the corresponding trees as our new sample, then run the regression on the new sample.
 
 ![](images/bootsrap-1.png)
 
@@ -52,7 +58,7 @@ As seen in the visuals above, each tree varied in size and number of displaced p
 
 All in all, block-bootstrapping is a useful method for estimating uncertainty of dependent data.
 
-Thanks for reading, and happy bootstrapping!
+Thanks for reading!
 
 Best, a certainly fun uncertainty estimator
 
@@ -62,21 +68,9 @@ Best, a certainly fun uncertainty estimator
 
 Lately, I've been trying to navigate through the differences in data science, data analytics, data engineering, and all the other options for careers generally dealing with data. Throughout all of the different roles and responsibilities, my favorite data skill has to be data visualization.
 
-I've always been really interested in art, color theory, visual aesthetics, fashion, and general design. In high school I seriously explored being a graphic design major, and as a little kid I wanted to animate movies. Another two things I have always loved are puzzles and math. In college, I've really enjoyed my higher math and statistics classes and learning to code because it's a bit of both puzzles and math. Adding it all together, we get to data visualizations. It's a perfect combination of all the things I find fascinating. Time flies by when I'm working on any data visualizations.
+I've always been really interested in art, color theory, visual aesthetics, and general design. In high school I seriously explored being a graphic design major, and as a little kid I wanted to animate movies. Another two things I have always loved are puzzles and math. In college, I've really enjoyed my higher math and statistics classes and learning to code because it's a bit of both puzzles and math. If you add art, design, math and coding all together, we get to data visualizations. It's a perfect combination of many things I enjoy doing.
 
 Another thing to know about me is that I love to help, which really is the nail in the coffin for my love of data visualizations. The whole point of creating good data visualizations is that they help people understand complex information.
-
-I want my career to be contributing to the world in a way I think is important.
-
-If you read my thoughts on gen Z and AI, you'll know I think my generation needs some help maintaining our critical thinking skills (aka not letting AI make all of our decisions for us). What follows is my thought process on how creating more data visualizations on current, informative topics would be of benefit to young people.
-
-Naturally, I began to think about how I could apply my skills to help my generation and the future ones continue to make informed decisions for themselves. Thinking through my given information (thanks math), we've got,
-
--   a population of young people overstimulated by information overload and decision fatigue
--   contained within a digital space, a time of screens, video games, bright, flashing colors, and 15 second videos
--   screen dependency that has led to health issues galore, including, but definitely not limited to, severe attention span issues
-
-With this information, I thought back through my question. How can I help people get engaged in interacting with information to make their own decisions? Well, with the target audience in mind, it seems obvious: make the information visual. While a histogram is never going to keep up with a TikTok video, if it's visually aesthetic, easy to read, and clearly communicates relevant information, at least people can look at it and learn something, which is a win in my book. If it can highlight some frequently overlooked information, or lead one's eye to an important pattern even better. If it makes even one person stop and think a little deeper about the topic, and why such a pattern might emerge, that's hitting the jackpot.
 
 Now, keep in mind data visualizations can easily be skewed (math pun unintended, but it made me laugh, so it stays) to make comparisons seem more drastic than they really are just by omitting zero in the y-axis. If it becomes overly visual and dynamic, it can distract from the content, or even worse just be confusing and hard to read. Use the wrong color combination and anyone who is color blind won't be able to understand the visual. If someone doesn't write alternate text, visually impaired people won't get the information. Needless to say, there are many ways data visualizations can go wrong, and not serve their original purpose, which is to communicate important information in an easily digestible way.
 
@@ -114,8 +108,10 @@ Not to worry though, now we have AI to aggregate and summarize all that informat
 
 I'm worried about my generation and the ones after mine. I'm worried that we will rely too heavily on AI, not to answer our questions, but to make our decisions for us. I've already seen my friends use it for everything from help in school to answering their Hinge messages. If we're not careful, AI is going to turn into our toxic relationship.
 
-We need to set some intentional boundaries with AI. The widespread availability of AI is amazing, but it also creates a big challenge for us. That challenge is having the awareness and discipline to use it to teach us so that we understand, instead of just trusting the first, easy, answer it gives. We need to remember that AI is a tool, and should be used as such. AI is so powerful and can help us do so many cool things, as long as we use it in the right way.
+We need to set some intentional boundaries with AI. The widespread availability of AI is amazing, but it also creates a big challenge for us. That challenge is having the awareness and discipline to use it to teach us, instead of just trusting the first answer it gives us. We need to remember that AI is a tool, and should be used as such. AI is so powerful and can help us do so many cool things, as long as we use it in the right way.
 
-I could go rambling on about why we need to spend more time in the real world and less in the virtual one, but for now, I'll leave it here.
+Some of my professors are realizing this and instead of just banning AI use completely, they are trying to teach us how to use it ethically, effectively, and to enhance our understanding. I'm so grateful to them. I think this is pretty niche to CS professors, because they have a better understanding of AI and it's future and want us to be able to succeed in industry post-grad. I'm seeing a lack of this approach among my friends in other majors and areas, most professors completely ban it. This full ban approach and lack of discussion on proper use of AI just means that students are using it irresponsibly. I hope that more conversations around AI use in academics or other areas arise. There needs to be more education and conversation on
+
+I think we need to spend more time in the real world and less in a virtual one, and if used correctly, AI can help us do that. How cool is that?
 
 Love, a laughably anti-tech tech girl
