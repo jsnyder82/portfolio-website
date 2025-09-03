@@ -1,0 +1,34 @@
+---
+title: "FDA Dashboard"
+format: dashboard
+---
+
+## Row 1
+### Col 1 {width=40%}
+
+**Objective:**
+Showcase why we can trust the FDA to approve vaccines by investigating who works there, what they do and the process for drug approval. This exploration was inspired by President Trump's recent post on X calling for vaccine effectiveness data to be made public. Releasing more complicated health data will only confuse people, and demanding it scares people into mistrust. This is why you don't need to read all the health data: people who have the background to correctly understand it already do that. 
+
+### Col 2{.tabset}
+#### Tab 1
+```{r}
+library(ggplot2)
+library(plotly)
+
+# Create a sample ggplot2 plot
+p <- ggplot(mtcars, aes(x = mpg, y = hp, color = cyl)) +
+  geom_point() +
+  labs(title = "MPG vs HP by Cylinders")
+
+# Convert the ggplot2 plot to an interactive plotly object
+ggplotly(p)
+```
+#### Tab 2 
+```{r}
+plot(iris)
+```
+
+
+## Row 3 {height=10%}
+
+How to make a dashboard in Quarto: https://youtu.be/R3sNVE8TYeo?si=Ktcyb8JLxmj1jhGK 

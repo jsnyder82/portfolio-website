@@ -36,8 +36,3 @@ I'm a senior at SDSU (go Aztecs!) and I absolutely love San Diego. When I'm not 
 
 I'm starting this website (in August 2025) to be a collection of my projects, thoughts, and overall learning in data science. Whether you are a future employer, a supportive friend or family member, or just curious about me and what I do, thank you for visiting.
 
-
-
-
-
-
