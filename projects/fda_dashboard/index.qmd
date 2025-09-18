@@ -6,8 +6,8 @@ format: dashboard
 ## Row 1
 ### Col 1 {width=40%}
 
-**Objective:**
-Showcase why we can trust the FDA to approve vaccines by investigating who works there, what they do and the process for drug approval. This exploration was inspired by President Trump's recent post on X calling for vaccine effectiveness data to be made public. Releasing more complicated health data will only confuse people, and demanding it scares people into mistrust. This is why you don't need to read all the health data: people who have the background to correctly understand it already do that. 
+**The Why::**
+Show why we can trust the FDA to approve vaccines by investigating who works there, what they do and the process for drug approval. This exploration was inspired by President Trump's recent post on X calling for vaccine effectiveness data to be made public. Releasing more complicated health data will only confuse people, and demanding it scares people into mistrust. You don't need to see every bit of health data because people who have the background to correctly understand it already do that. 
 
 ### Col 2{.tabset}
 #### Tab 1

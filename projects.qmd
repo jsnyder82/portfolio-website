@@ -8,7 +8,7 @@ On to the fun part! For now, I've linked past class projects. I'll be updating t
 ::: card
 ![](project-thumbnails/COPD.png)
 
-### [COPD Gene Project - Class Final](projects-folder/COPD_gene_project.html)
+### [COPD Gene Project - Class Final](projects/COPD_gene_project.html)
 
 Analyze relationship between Phase 2 FEV1 Scores and other variables in data set Tags: R, COPD, Data Visualization, Bootstrapping
 :::
