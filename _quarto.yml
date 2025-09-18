@@ -32,5 +32,5 @@ project:
     - index.qmd
     - projects.qmd
     - blog.qmd
-    - projects-folder/COPD_gene_project.qmd
+    - projects/COPD_gene_project.qmd
 

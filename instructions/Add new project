@@ -1,0 +1,16 @@
+To add a new project:
+
+> create .qmd file for project in projects folder
+
+> in quarto yaml file, add project file to render list (at bottom)
+    >  - projects/project-name.qmd
+
+> add image to project-thumbnails folder 
+    > for ggplots -> ggsave(filename = "name.png", path = "~/portfolio-website/project-thumbnails")
+    
+> in projects.qmd add project card 
+    :::card 
+    ![](project-thumbnails/name.png)
+    ### [Project Title](projects/project-name.html)
+    Project Description goes here Tags: new project
+    :::
