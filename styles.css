@@ -62,6 +62,6 @@ a {
 }
 
 /* Change background color for project pages */
-body.project-page {
+.project-page {
   background-color: #fff; 
 }

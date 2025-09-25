@@ -1,6 +1,16 @@
 To add a new project:
 
 > create .qmd file for project in projects folder
+    > at top of project file: 
+    ---
+    title: "Project Name"
+    description: "Project description here"
+    format: 
+      html: 
+        class: project-page
+    date: 2025-05-08
+    categories: [R, Tag1, Tag2]
+    ---
 
 > in quarto yaml file, add project file to render list (at bottom)
     >  - projects/project-name.qmd
