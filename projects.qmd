@@ -2,9 +2,9 @@
 title: "Projects"
 ---
 
-On to the fun part! For now, I've linked past class projects. I'll be updating this page with more personal projects, so check back for updates.
+On to the fun part! This page is a collection of past class projects, club workshops, and personal projects that showcase my technical skills.
 
-::: grid
+::::: grid
 ::: card
 ![](project-thumbnails/COPD.png)
 
@@ -12,4 +12,12 @@ On to the fun part! For now, I've linked past class projects. I'll be updating t
 
 Analyze relationship between Phase 2 FEV1 Scores and other variables in data set Tags: R, COPD, Data Visualization, Bootstrapping
 :::
+
+::: card
+### ![](project-thumbnails/CA-tableau.png)[Census Tableau Dashboard - DSI Workshop](projects/DSI_tableau_workshop.html) 
+
+Data Science Initiative (DSI) Workshop: Creating dashboards in Tableau with CA County Census Data
+
+Tags: Tableau, Data Visualization, Dashboard
 :::
+:::::
