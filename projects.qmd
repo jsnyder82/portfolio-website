@@ -12,7 +12,7 @@ Data Science Initiative (DSI) Workshop: Creating dashboards in Tableau with CA C
 
 Tags: Tableau, Data Visualization, Dashboard
 
-October 2025
+September 2025
 :::
 ::: card
 ![](project-thumbnails/COPD.png)
