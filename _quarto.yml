@@ -33,4 +33,5 @@ project:
     - projects.qmd
     - blog.qmd
     - projects/COPD_gene_project.qmd
+    - projects/dimo_abstract.qmd
 

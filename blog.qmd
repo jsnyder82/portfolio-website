@@ -4,14 +4,14 @@ title: "Blog"
 
 Welcome to my blog! Check in for posts about my projects, statistics, coding, and information about me and my interests. I hope reading some of my posts helps you get to know me better and you learn something cool about statistics and data analysis.
 
-Click on the titles on the side to jump to different posts :)
+Click on the titles on the side to jump to different posts ->
 
 
 ## Pull Yourself up by Your (Block) Bootstraps
 
-Hello again,
+Hello,
 
-Today I'll be writing about the concept of block bootstrapping and how I used it in my research project at UC Irvine this summer (2025). As a part of our final presentation at UCI, I taught the audience about this concept to explain my research findings.
+Today's post is about the concept of block bootstrapping and how I used it in my research project at UC Irvine last summer (2025). As a part of our final presentation at UCI, I taught the audience about this concept to explain my research findings.
 
 Bootstrapping is a statistical method used to estimate the uncertainty of a desired statistic. It's typically used when you don't know the sampling distribution of the desired statistic or your data violates specific distribution assumptions, and therefore you cannot use traditional methods of uncertainty estimation that use theoretical sampling distributions.
 
@@ -69,50 +69,15 @@ Best, a certainly fun uncertainty estimator
 
 Lately, I've been trying to navigate through the differences in data science, data analytics, data engineering, and all the other options for careers generally dealing with data. Throughout all of the different roles and responsibilities, my favorite data skill has to be data visualization.
 
-I've always been really interested in art, color theory, visual aesthetics, and general design. In high school I seriously explored being a graphic design major, and as a little kid I wanted to animate movies. Another two things I have always loved are puzzles and math. In college, I've really enjoyed my higher math and statistics classes and learning to code because it's a bit of both puzzles and math. If you add art, design, math and coding all together, we get to data visualizations. It's a perfect combination of many things I enjoy doing.
+I've always been really interested in art, color theory, visual aesthetics, and general design. In high school I seriously explored studying graphic design in college, and as a little kid I wanted to animate movies, both very creative industries. Another two things I have always loved are puzzles and math. In college, I've really enjoyed my higher math and statistics classes and learning to code because it's a bit of both puzzles and math. If you add art, design, math and coding all together, we get to data visualizations. It's a perfect combination of many things I enjoy.
 
 Another thing to know about me is that I love to help, which really is the nail in the coffin for my love of data visualizations. The whole point of creating good data visualizations is that they help people understand complex information.
 
-Now, keep in mind data visualizations can easily be skewed (math pun unintended, but it made me laugh, so it stays) to make comparisons seem more drastic than they really are just by omitting zero in the y-axis. If it becomes overly visual and dynamic, it can distract from the content, or even worse just be confusing and hard to read. Use the wrong color combination and anyone who is color blind won't be able to understand the visual. If someone doesn't write alternate text, visually impaired people won't get the information. Needless to say, there are many ways data visualizations can go wrong, and not serve their original purpose, which is to communicate important information in an easily digestible way.
+Now, keep in mind data visualizations can easily be skewed (stats pun unintended, but it made me laugh, so it stays) to make comparisons seem more drastic than they really are just by omitting zero in the y-axis. If it becomes overly visual and dynamic, it can distract from the content, or even worse just be confusing and hard to read. Use the wrong color combination and anyone who is color blind won't be able to understand the visual. Needless to say, there are many ways data visualizations can go wrong and not serve their original purpose, which is to communicate important information in an easily digestible way.
 
-I want to create relevant and engaging data visualizations, so that all people can continue to make their own well-informed decisions, and focus on living in the real world instead of a virtual one.
+I want to create relevant and engaging data visualizations, so that all people can continue to make their own well-informed decisions.
 
 Cheers, a data viz enthusiast
 
 ------------------------------------------------------------------------
 
-## Gen Z and AI
-
-My generation has grown up in a world where almost any information we could ever want to know is only a few clicks away. Take any given day, usually mid conversation, I'll realize I don't know something, and if the person I'm talking to doesn't know either, I usually say, "I'm gonna look it up".
-
-I want to know the correct answer, not just the speculation of someone (my friend) who's far from an expert. The amazing thing is I can find out the real answer, with just a few taps on a screen. Well I can find out one answer,
-
-and another answer from three news articles about the topic,
-
-another answer from a nonprofit's website,
-
-and another similar answer from an academic paper,
-
-what six to seven influencers think about the subject,
-
-and a reddit feed, or two, of questionable (at best) advice on the topic,
-
-and I can see some related images,
-
-about four videos teaching me about the topic,
-
-and of course six different companies trying to sell me whatever it is I've looked up.
-
-There is so much data on the internet, and so many answers. Growing up, I remember being taught that if I could find three sources that say the same thing, that it's probably the right answer. I was 10, and doing a research project on giraffes. With all the information and data out there, three sources might not be enough anymore. Not to mention what I want to know is a lot more complex than how tall a baby giraffe is.
-
-Not to worry though, now we have AI to aggregate and summarize all that information on the internet. It'll give you a concise answer and even show its sources. Great! Well, is it really? I mean yes it is, it saves time and it does make finding an answer easier. But, is easier always better?
-
-I'm worried about my generation and the ones after mine. I'm worried that we will rely too heavily on AI, not just to answer our questions, but to make our decisions for us. I've already seen my friends use it for everything from schoolwork to answering their Hinge messages. If we're not careful, AI is going to turn into a codependent relationship.
-
-The widespread availability of AI is amazing, but it also creates a big challenge for us. That challenge is having the awareness and discipline to use it responsibly, to teach us, instead of just trusting the first answer it gives. We need to remember that AI is a tool, and should be used as such. AI is so powerful and can help us do so many cool things, as long as we use it in the right way.
-
-Some of my professors are realizing this and instead of just banning AI use completely, they are trying to teach us how to use it ethically, effectively, and to enhance our understanding. I'm so grateful for them. I think this is pretty niche to my younger CS professors because they have a better understanding of AI and it's future and want us to be able to succeed in industry post-grad. I've noticed a lack of this approach among my friends in other majors and in my classes in other disciplines. Most professors completely ban it. This full ban approach and lack of discussion on proper use of AI just means that students are using it irresponsibly. I hope that more conversations around AI use in academics arise. More education and conversation on the capabilities and ethical use of AI, especially in non-tech circles, would greatly improve responsible use of AI.
-
-We should spend more time in the real world and less in a virtual one, and if used correctly, AI helps us do that. How cool is that?
-
-Love, a laughably anti-tech tech girl

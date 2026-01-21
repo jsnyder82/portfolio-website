@@ -6,6 +6,15 @@ On to the fun part! This page is a collection of past class projects, club works
 
 ::::: grid
 ::: card
+### ![](project-thumbnails/SDSU_logo.png)[SDSU Disease Modeling Lab: Current Project](projects/dimo_abstract.html)
+
+SDSU Disease Modeling Lab: Method of Estimating Basic Reproduction Number of Vector-Borne Diseases (Abstract - Paper In Progress)
+
+Tags: R, Biostatistics, Epidemiology
+
+January 2025
+:::
+::: card
 ### ![](project-thumbnails/CA-tableau.png)[Census Tableau Dashboard - DSI Workshop](projects/DSI_tableau_workshop.html)
 
 Data Science Initiative (DSI) Workshop: Creating dashboards in Tableau with CA County Census Data
