@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jsnyder82.github.io/portfolio-website/projects/COPD_gene_project.html</loc>
-    <lastmod>2025-09-18T02:43:49.077Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jsnyder82.github.io/portfolio-website/projects.html</loc>
-    <lastmod>2025-10-14T23:05:25.479Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jsnyder82.github.io/portfolio-website/index.html</loc>
-    <lastmod>2025-09-25T17:31:27.937Z</lastmod>
+    <loc>https://jsnyder82.github.io/portfolio-website/projects/dimo_abstract.html</loc>
+    <lastmod>2026-01-21T06:39:34.679Z</lastmod>
   </url>
   <url>
     <loc>https://jsnyder82.github.io/portfolio-website/blog.html</loc>
-    <lastmod>2025-09-25T16:48:30.898Z</lastmod>
+    <lastmod>2026-01-21T06:24:58.768Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jsnyder82.github.io/portfolio-website/index.html</loc>
+    <lastmod>2026-01-21T06:33:17.930Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jsnyder82.github.io/portfolio-website/projects.html</loc>
+    <lastmod>2026-01-21T06:44:50.308Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jsnyder82.github.io/portfolio-website/projects/COPD_gene_project.html</loc>
+    <lastmod>2025-09-18T02:43:49.077Z</lastmod>
   </url>
 </urlset>
