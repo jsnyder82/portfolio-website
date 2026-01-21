@@ -3,6 +3,9 @@ title: "SDSU DiMo Lab Project"
 format: html
 ---
 
-# Method of Estimating the Basic Reproduction Number of Vector-Borne Diseases
+This paper is currently in progress. I will be presenting this project at SDSU's S3 Symposium on February 27, 2026. 
+
+
+### Method of Estimating the Basic Reproduction Number of Vector-Borne Diseases
 
 Infectious diseases remain a leading cause of global morbidity and mortality, necessitating continuous development of evidence-based public health interventions to effectively limit their transmission. Accurate estimation of the basic reproduction number (R0), the threshold that represents the average number of secondary cases generated from a single infected individual in a completely susceptible population, is critical for designing and evaluating public health policies for epidemic preparedness. Current R0 estimation methods using incidence data are inappropriate for vector-borne diseases because of the indirect transmission pathway with the vector and human as the alternative second generation in succession. In addition, the lack of sufficient vector incidence data poses further challenges to R0 estimation of vector-borne diseases. In this study, we develop a maximum likelihood-based novel method that incorporates the human-vector-human transmission pathway and uses the infected human incidence data. We implemented our method with Dengue fever (mosquito-borne) incidence data from Taiwan (2014 - 2015). A thorough sensitivity analysis was conducted on several parameters to understand the effect of disease generation time (time distribution of the infectious period) and data collection frequency on the basic reproduction numbers. The results demonstrate that our method yields a robust and accurate estimate of R0 for vector-borne diseases, providing a previously unavailable tool that is essential to the timely assessment and development of prevention strategies for vector-borne diseases.
