@@ -12,6 +12,13 @@ categories: [R, Epidemiology, Data Visualization]
 
 This project was written by Dr. Kyle Hasenstab as the final project for an introductory data science class taught in R at SDSU. It was completed by Jayna Snyder. Formatting has been edited for display on portfolio.
 
+## Table of Contents
+[Introduction](#introduction)
+[Data Wrangling](#data-wrangling)
+[Descriptive Statistics and Exploratory Analysis](#descriptive-statistics-and-exploratory-analysis)
+[Inference and Modeling](#inference-and-modeling)
+[Discussion](#discussion)
+
 ## Introduction
 
 Chronic obstructive pulmonary disease (COPD) affects over 16 million Americans and is the fourth leading cause of death in the United States behind heart disease, cancer, and accidental death. While COPD can result from various toxic inhalations or asthma, it is most commonly associated with cigarette smoking.
@@ -144,6 +151,7 @@ write.csv(x = COPD_data_clean, file = "copd_data.csv")
 ```
 
 ## Descriptive Statistics and Exploratory Analysis
+
 **Function for descriptive statistics**
 
 ```{r function for descriptive stats}
@@ -526,18 +534,14 @@ Based on my linear regression models, and the bootstrapped 95% confidence interv
 
 -   FVC and phase 2 fev1 score are significantly correlated (slope is significantly greater than 0) because 0 is not contained within the interval
 
-## Conclusion
+## Discussion
 
 Affecting over 16 million Americans, chronic obstructive pulmonary disease (COPD) is commonly caused by cigarette smoking, asthma, and toxin inhalation. There is no cure for COPD; however, patients receive care to manage symptoms and slow the progression of the disease. One way to measure the severity of COPD is through spirometry. One spirometry measure is the forced expiratory volume (FEV1), which measures the volume of air forcefully exhaled in 1 second. The aim of this study was to compare patients' FEV1 scores at the five year follow up (denoted as "phase 2"), to other variables from the patient data.
 
-
 The data used came from the COPDGene Research Group. It included separate datasets of demographic, spirometry and medical image data for 2620 patients. The datasets were merged together by patient id. The data was cleaned to remove missing values, and convert variables into more usable data types. The final dataset was 2600 rows and 41 variables. The variables included information about visit date, patients’ age, gender, race, smoking status, blood pressure, heart rate, height, weight, and bmi. There were also variables about the patient's smoking history and any respiratory illness diagnoses. Spirometry variables included lung volume inspiratory and expiratory (the volume of air in lungs at inhalation and exhalation), FEV1, FEV1 at phase 2 (follow up), forced vital capacity (FVC) and fev1_fvc ratio.
-
 
 Exploratory analysis was performed next. A function was created to return summary statistics for numeric variables, and a frequency table for character variables. The lapply function was utilized to apply the custom function to each column in the dataset. The ggplot2 library was used to create histograms for all numeric and integer variables. After reviewing these histograms, some variables were transformed to be more normally distributed to be used for analysis. The fev1_fvc_ratio was left-skewed, so a square transformation was performed. Lung volume expiratory, emphysema percentage, average cigarettes per day, and smoking start age were all highly right skewed and log transformations were performed on these.
 
-
 Next, to compare phase 2 FEV1 scores between different groups of patients, ggplot2 was used to create boxplots of categorical variables. The chosen categorical variables were gender, smoking status, hay fever, asthma, and copd diagnosis. The boxplots showed differences between groups for gender, asthma and copd. Scatterplots were created with ggplot2 to look for relationships between numeric variables and phase 2 fev1 scores. Lung volume inspiratory, lung volume expiratory (log-transformed), duration smoking, average number of cigarettes per day (log-transformed) and FVC were graphed as explanatory variables with phase 2 FEV1 as the response. The scatterplots for lung volume inspiratory and FVC showed positive linear relationships, while lung volume expiratory and duration smoking showed negative linear relationships.
-
 
 Finally, bootstrapping was implemented to test the significance of the relationships seen in the data visualizations that were created. Bootstrapping is a method that involves repeatedly sampling a data sample with replacement. This process simulates the sampling distribution, which allows for statistical inference to be made through confidence intervals. Bootstrapped confidence intervals were created for the mean difference in phase 2 FEV1 scores for each of the categorical variables chosen. These confidence intervals revealed that females have significantly lower phase 2 FEV1 scores than males do, current smokers have significantly greater phase 2 FEV1 scores than former smokers, hay fever diagnosis does not relate to phase 2 fev1 scores, patients without asthma have greater phase 2 fev1 scores than patients with asthma, and patients without copd have greater phase 2 copd scores than patients without copd. The difference in phase 2 FEV1 scores between current and former smokers had a 95% confidence interval of \[0.09, 0.21\] which are relatively small values compared to the difference of patients with or without COPD, \[0.92, 1.04\], so even though the differences for smoking status are statistically significant, they may not be clinically significant. For numeric variables, bootstrapped confidence intervals were made for the slopes of a simple linear regression model between each one of the chosen numeric variables and phase 2 FEV1 scores. As expected based on the scatterplots, the confidence intervals showed lung volume inspiratory and FVC had slopes significantly greater than zero, indicating positive linear relationships, and lung volume expiratory, duration smoking, and average cigarettes per day had slopes significantly less than zero, indicating negative linear relationships with phase 2 FEV1. Overall, many variables, categorical and quantitative, have significant relationships with phase 2 fev1 scores, so more analysis is needed to determine which variables are the most significant.

@@ -6,7 +6,7 @@ On to the fun part! This page is a collection of past class projects, club works
 
 ::::: grid
 ::: card
-### ![](project-thumbnails/SDSU_logo.png)[SDSU Disease Modeling Lab: Current Project](projects/dimo_abstract.html)
+### ![](project-thumbnails/blank.png)[SDSU Disease Modeling Lab: Current Project](projects/dimo_abstract.html)
 
 SDSU Disease Modeling Lab: Method of Estimating Basic Reproduction Number of Vector-Borne Diseases (Abstract - Paper In Progress)
 

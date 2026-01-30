@@ -30,9 +30,9 @@ website:
 
 ## Welcome
 
-Hello! I’m Jayna, a data science student who loves blending statistics with creativity. Building projects that make a difference by using data to help produce more thoughtful understanding of complex topics excites me. I want my work to help people, and I love bringing joy and energy to the process.
+Hello! I'm Jayna, a statistics and data science senior at SDSU (go Aztecs!) with a passion for computational biology and public health. I'm an undergraduate researcher in SDSU's Disease Modeling Lab, where I work on mathematical methods for understanding how infectious diseases spread. What excites me most is using data to make complex topics more understandable and, ultimately, to help people.
 
-I'm a senior at SDSU (go Aztecs!) and I love San Diego. When I'm not on my computer, I love being outside, biking around the bay, practicing yoga, crocheting, and just yapping with my friends. I'm also a big coffee lover, and currently work part-time as a barista :) 
+Outside of research and coursework, you'll find me biking around the bay, practicing yoga, crocheting, or attempting to learn latte art at my part-time barista job. I love San Diego and bringing joy and curiosity to everything I do.
 
-I'm starting this website (in August 2025) to be a collection of my projects, thoughts, and overall learning throughout my last year of college and onward. Whether you are a future employer, a supportive friend or family member, or just curious about me and what I do, thank you for being here. 
+I started this site to document my projects, ideas, and learning as I finish my senior year and move toward a career in biotech and biostatistics research. Whether you're a future collaborator, a recruiter, a friend, or just curious — thanks for stopping by. 
 

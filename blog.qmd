@@ -4,7 +4,6 @@ title: "Blog"
 
 Welcome to my blog! Check in for posts about my projects, statistics, coding, and information about me and my interests. I hope reading some of my posts helps you get to know me better and you learn something cool about statistics and data analysis.
 
-Click on the titles on the side to jump to different posts ->
 
 
 ## Pull Yourself up by Your (Block) Bootstraps
@@ -55,23 +54,23 @@ We repeat this process again,
 
 Each time, we will have different trees included to run our regression model with. We repeated this process 500 times. It is common to take between 500 and 2000 bootstrap samples. Then we can use quantiles (AKA percentiles) to construct confidence intervals for our regression model coefficients. For a 95% confidence interval this would be the 2.5 percentile and the 97.5 percentile.
 
-As seen in the visuals above, each tree varied in size and number of displaced people. This was important to our interpretation of our confidence intervals for a few reasons. First, since the trees varied in size, even though there were the same number of trees in each bootstrap sample, there was a different total number of nodes. Second, since there was large variation between trees and in the number of displaced people per tree, some bootstrap samples might have a lot of displaced, and some might have very very few. Our main variable of interest was the displacement status on an individual's recruiter, so having a large variation in number of displaced people per sample greatly affected the coefficients of the regression model.
+As seen in the visuals above, each tree varied in size and number of displaced people. This was important to our interpretation of our confidence intervals for a few reasons. First, since the trees varied in size, even though there were the same number of trees in each bootstrap sample, there was a different total number of nodes. Second, since there was large variation between trees and in the number of displaced people per tree, some bootstrap samples might have a lot of displaced, and some might have very very few. Our main variable of interest was the displacement status on an individual's recruiter, so having a large variation in number of displaced people per sample greatly affected the uncertainty of coefficients of the regression model.
 
-All in all, block-bootstrapping is a useful method for estimating uncertainty of dependent data.
+This project provided the opportunity for me to learn how different versions of traditional statistical methods, like block-bootstrapping, can be applied to nontraditional data. I hope this blog post helped you learn something new, and inspired you to innovate with your data analysis methods. 
 
 Thanks for reading!
 
-Best, a certainly fun uncertainty estimator
+Best, a certainly optimistic uncertainty estimator
 
 ------------------------------------------------------------------------
 
-## Why I Love Data Visualization
+## Data Visualization
 
 Lately, I've been trying to navigate through the differences in data science, data analytics, data engineering, and all the other options for careers generally dealing with data. Throughout all of the different roles and responsibilities, my favorite data skill has to be data visualization.
 
 I've always been really interested in art, color theory, visual aesthetics, and general design. In high school I seriously explored studying graphic design in college, and as a little kid I wanted to animate movies, both very creative industries. Another two things I have always loved are puzzles and math. In college, I've really enjoyed my higher math and statistics classes and learning to code because it's a bit of both puzzles and math. If you add art, design, math and coding all together, we get to data visualizations. It's a perfect combination of many things I enjoy.
 
-Another thing to know about me is that I love to help, which really is the nail in the coffin for my love of data visualizations. The whole point of creating good data visualizations is that they help people understand complex information.
+Another thing to know about me is that I am a helper by nature, which really is the nail in the coffin for my love of data visualizations. The whole point of creating good data visualizations is to help people understand complex information.
 
 Now, keep in mind data visualizations can easily be skewed (stats pun unintended, but it made me laugh, so it stays) to make comparisons seem more drastic than they really are just by omitting zero in the y-axis. If it becomes overly visual and dynamic, it can distract from the content, or even worse just be confusing and hard to read. Use the wrong color combination and anyone who is color blind won't be able to understand the visual. Needless to say, there are many ways data visualizations can go wrong and not serve their original purpose, which is to communicate important information in an easily digestible way.
 

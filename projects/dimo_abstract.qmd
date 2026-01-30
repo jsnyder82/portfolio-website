@@ -3,7 +3,7 @@ title: "SDSU DiMo Lab Project"
 format: html
 ---
 
-This paper is currently in progress. I will be presenting this project at SDSU's S3 Symposium on February 27, 2026. 
+I'm currently in the process of writing and editing the manuscript for this project, to be submitted for publication. I will be presenting a poster for this project at SDSU's S3 Research Symposium on February 27, 2026. 
 
 
 ### Method of Estimating the Basic Reproduction Number of Vector-Borne Diseases
